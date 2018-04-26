@@ -7,6 +7,13 @@ class Board {
     private:
         // TODO
         // define your data members and private methods here
+        unsigned int dim;
+        unsigned int largeNum;
+        const unsigned int** gB;
+        char dType;
+        unsigned int dist;
+        unsigned int mov;
+        unsigned int zRow;
 
     public:
         // default constructor (for creating an empty board)
@@ -14,7 +21,7 @@ class Board {
         // full constructor
         // b: an initial board configuration
         // the board is just a sequence of numbers in row-major order (including the zero element)
-        // n: number of elements in the board
+        // n: number of elements in the board (excluding 0) so 3 by 3 is n = 8
         // m: an initial number of moves
         // type: distance to be used 'm' for manhattan and 'b' for hamming
         Board(const unsigned int *b, unsigned int n, unsigned int m, char type);
