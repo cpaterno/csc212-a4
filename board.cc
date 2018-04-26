@@ -2,6 +2,7 @@
 
 Board::Board() {
 	dim = 0; // calculated
+	largeNum = 0;
 	gB = nullptr;
 	dType = 0;
 	dist = 0;
