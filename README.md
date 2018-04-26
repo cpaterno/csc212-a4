@@ -9,10 +9,10 @@ Using A* Search to Solve the N-Puzzle Problem
 - [ ] Destructor 
 - [ ] `is_solvable` method
 - [ ] `is_goal` method
-- [ ] neighbors method
-- [ ] hamming method
-- [ ] manhattan method
-- [ ] inversions method
+- [ ] `neighbors` method
+- [ ] `hamming` method
+- [ ] `manhattan` method
+- [ ] `inversions` method
 
 # Main Checklist 
 - [ ] `solve` method (A* search)
