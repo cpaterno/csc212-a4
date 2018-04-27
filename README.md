@@ -3,16 +3,16 @@ Assignment 4 for CSC 212 Class @ URI
 Using A* Search to Solve the N-Puzzle Problem
 
 # Board Checklist
-- [ ] Datamembers
-- [ ] Default Constructor
-- [ ] Useful Constructor
-- [ ] Destructor 
-- [ ] `is_solvable` method
-- [ ] `is_goal` method
+- [x] Datamembers
+- [x] Default Constructor
+- [x] Useful Constructor
+- [x] Destructor 
+- [x] `is_solvable` method
+- [x] `is_goal` method
 - [ ] `neighbors` method
-- [ ] `hamming` method
-- [ ] `manhattan` method
-- [ ] `inversions` method
+- [x] `hamming` method
+- [x] `manhattan` method
+- [x] `inversions` method
 
 # Main Checklist 
 - [ ] `solve` method (A* search)

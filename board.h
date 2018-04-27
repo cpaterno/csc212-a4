@@ -8,12 +8,15 @@ class Board {
         // TODO
         // define your data members and private methods here
         unsigned int dim;
-        unsigned int largeNum;
-        const unsigned int** gB;
+        unsigned int N;
+        unsigned int* gB;
         char dType;
         unsigned int dist;
         unsigned int mov;
         unsigned int zRow;
+        // helpers 
+        unsigned int calcHam();
+        unsigned int calcMan();
 
     public:
         // default constructor (for creating an empty board)
