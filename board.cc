@@ -83,16 +83,13 @@ unsigned int Board::calcMan() {
 		// ignore the empty element
 		if (gB[i] == 0) continue;
 		index = gB[i] - 1;
-		if ((int)i == index) continue; // optimization
+		// if the element is in the right space, no need to do any calculations
+		if ((int)i == index) continue; 
 		sR = index / dim;
 		sC = abs(index - (sR * dim));
 		aR = i / dim;
 		aC = abs(i - (aR * dim));
-		// coordinates reversed case
-		if (sC == aR && sR == aC) 
-			man += ((sC + aR + sR + aC) / dim);
-		else 
-			man += abs((sR + sC) - (aR + aC));
+		man += abs(sR - aR) + abs(sC - aC);
 	}
 	return man;
 }
