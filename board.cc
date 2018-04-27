@@ -9,28 +9,30 @@ Board::Board() {
 	dType = 0; 
 	dist = 0; 
 	mov = 0; 
-	zRow = 0; 
+	zRow = 0;
+	zCol = 0; 
 	inver = 0;
 }       
 
 Board::Board(const unsigned int *b, unsigned int n, unsigned int m, char type) {
-	unsigned int r = 0;
+	unsigned int index = 0;
 	dim = sqrt(n + 1);
 	N = n;
 	dType = type;
 	mov = m;
 	dist = 0; // initialize dist
 	zRow = 0; // initialize zRow
+	zCol = 0;
 
 	// setup the board
 	gB = new unsigned int[N + 1];
 	// fill in its values
 	for(unsigned int i = 0; i < (N + 1); i++) {
-		if (i > 0 && i % dim == 0) r++;
 		gB[i] = b[i];
-		if (b[i] == 0) zRow = r; // update zRow
+		if (b[i] == 0) index = i;
 	}
-
+	zRow = index / dim;
+	zCol = abs(index - ((int)zRow * dim));
 	// update dist
 	if (dType == 'm') dist = calcMan();
 	else if (dType == 'b') dist = calcHam();
@@ -53,13 +55,7 @@ bool Board::is_goal() {
 }
         
 void Board::neighbors(std::vector<Board *> *neigh, char type) {
-	if (zRow == 0 || zRow == dim - 1) {
-		// special case only 2 neighbors
-	} else {
-		// then check column
-		// if 0 is not on edge of row then there are 4 neighbors
-		// if 0 is on edge then there are 3 neighbors
-	}
+	
 }
         
 unsigned int Board::get_n_moves() {
@@ -120,3 +116,10 @@ unsigned int Board::inversions() {
 	return inver;
 }
 
+unsigned int Board::getZRow() {
+	return zRow;
+}
+
+unsigned int Board::getZCol() {
+	return zCol;
+}

@@ -12,6 +12,8 @@ void testMethods(const unsigned int *b, unsigned int n, char type) {
     std::cout << root->get_n_moves() << std::endl;
     std::cout << root->inversions() << std::endl;
     std::cout << root->manhattan() << std::endl;
+    std::cout << root->getZRow() << std::endl;
+    std::cout << root->getZCol() << std::endl; 
 } 
 
 // -----------------------------------------------------------------------

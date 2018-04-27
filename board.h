@@ -14,6 +14,7 @@ class Board {
         unsigned int dist;
         unsigned int mov;
         unsigned int zRow;
+        unsigned int zCol;
         unsigned int inver;
         // helpers 
         unsigned int calcHam();
@@ -47,6 +48,9 @@ class Board {
         unsigned int manhattan();
         // counts the number of inversions on a particular board
         unsigned int inversions();
+        /* Added Helpers */
+        unsigned int getZRow();
+        unsigned int getZCol();
 };
 
 #endif
