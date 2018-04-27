@@ -42,7 +42,7 @@ Board::~Board() {
 bool Board::is_solvable() {
 	unsigned int inver = inversions(); 
 	if (dim % 2 != 0 && inver % 2 == 0) return true;
-	else if (dim % 2 == 0 && (inver + zRow) % 2 == 0) return true;
+	else if (dim % 2 == 0 && (inver + zRow) % 2 != 0) return true;
     return false;
 }
 
