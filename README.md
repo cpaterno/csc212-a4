@@ -16,5 +16,5 @@ Using A* Search to Solve the N-Puzzle Problem
 
 # Main Checklist 
 - [ ] `solve` method (A* search)
-- [ ] File IO
+- [x] File IO
 - [ ] Comments and Optimizations

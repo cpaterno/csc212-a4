@@ -36,7 +36,7 @@ class Board {
         // verifies whether the board is a goal board
         bool is_goal();
         // returns in neigh a list of neighbors for this node
-        void neighbors(std::vector<const Board *> *neigh, char type);
+        void neighbors(std::vector<Board *> *neigh, char type);
         // gets the number of moves made so far (up to this node)
         unsigned int get_n_moves();
         // returns the hamming distance to the goal

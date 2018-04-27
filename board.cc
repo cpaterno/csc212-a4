@@ -51,7 +51,7 @@ bool Board::is_goal() {
     return false;
 }
         
-void neighbors(std::vector<const Board *> *neigh, char type) {
+void neighbors(std::vector<Board *> *neigh, char type) {
 
 }
         
