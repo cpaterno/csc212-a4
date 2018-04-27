@@ -60,7 +60,6 @@ unsigned int Board::get_n_moves() {
 }        
 
 unsigned int Board::calcHam() {
-	if (dType != 'b') return dist;
 	unsigned int ham = 0;
 	for(unsigned int i = 0; i < (N + 1); i++) {
 		if (gB[i] != 0 && gB[i] != i + 1) ham++;
@@ -73,7 +72,6 @@ unsigned int Board::hamming() {
 }
 
 unsigned int Board::calcMan() {
-	if (dType != 'm') return dist;
 	unsigned int man = 0;
 	int index = 0;
 	int sR = 0;
