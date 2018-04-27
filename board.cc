@@ -10,6 +10,7 @@ Board::Board() {
 	dist = 0; 
 	mov = 0; 
 	zRow = 0; 
+	inver = 0;
 }       
 
 Board::Board(const unsigned int *b, unsigned int n, unsigned int m, char type) {
@@ -33,6 +34,7 @@ Board::Board(const unsigned int *b, unsigned int n, unsigned int m, char type) {
 	// update dist
 	if (dType == 'm') dist = calcMan();
 	else if (dType == 'b') dist = calcHam();
+	inver = countInvers();
 }
 
 Board::~Board() {
@@ -40,7 +42,6 @@ Board::~Board() {
 }
 
 bool Board::is_solvable() {
-	unsigned int inver = inversions(); 
 	if (dim % 2 != 0 && inver % 2 == 0) return true;
 	else if (dim % 2 == 0 && (inver + zRow) % 2 != 0) return true;
     return false;
@@ -51,8 +52,14 @@ bool Board::is_goal() {
     return false;
 }
         
-void neighbors(std::vector<Board *> *neigh, char type) {
-
+void Board::neighbors(std::vector<Board *> *neigh, char type) {
+	if (zRow == 0 || zRow == dim - 1) {
+		// special case only 2 neighbors
+	} else {
+		// then check column
+		// if 0 is not on edge of row then there are 4 neighbors
+		// if 0 is on edge then there are 3 neighbors
+	}
 }
         
 unsigned int Board::get_n_moves() {
@@ -98,13 +105,18 @@ unsigned int Board::manhattan() {
     return dist;
 }
 
-unsigned int Board::inversions() {
+unsigned int Board::countInvers() {
 	unsigned int count = 0;
 	for(unsigned int i = 0; i < (N + 1); i++) {
 		for(unsigned int j = i + 1; j < (N + 1); j++) {
 			if (gB[i] > gB[j]) count++;
 		}
 	}
-    return count;
+    return count;	
+}
+
+
+unsigned int Board::inversions() {
+	return inver;
 }
 

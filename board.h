@@ -14,9 +14,11 @@ class Board {
         unsigned int dist;
         unsigned int mov;
         unsigned int zRow;
+        unsigned int inver;
         // helpers 
         unsigned int calcHam();
         unsigned int calcMan();
+        unsigned int countInvers();
 
     public:
         // default constructor (for creating an empty board)
