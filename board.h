@@ -51,6 +51,7 @@ class Board {
         /* Added Helpers */
         unsigned int getZRow();
         unsigned int getZCol();
+        void printBoard();
 };
 
 #endif

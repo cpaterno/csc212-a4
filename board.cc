@@ -1,5 +1,5 @@
 #include "board.h"
-
+#include <iostream>
 #include <cmath>
 
 Board::Board() {
@@ -122,4 +122,12 @@ unsigned int Board::getZRow() {
 
 unsigned int Board::getZCol() {
 	return zCol;
+}
+
+void Board::printBoard() {
+	for(unsigned int i = 0; i < (N + 1); i++) {
+		std::cout << gB[i] << ' ';
+		if ((i + 1) % dim == 0) std::cout << std::endl;
+	}
+	std::cout << std::endl;
 }
