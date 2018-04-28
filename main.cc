@@ -1,20 +1,19 @@
 #include "board.h"
 #include <iostream>
-#include <cmath> 
 #include <vector>
 #include <queue>
 
 void testMethods(const unsigned int *b, unsigned int n, char type) {
-	Board* root = new Board(b, n, 0, type);
+	Board root = Board(b, n, 0, type);
 	std::vector<Board*> neighbors;
-    std::cout << std::boolalpha << root->is_solvable() << std::endl;
-    std::cout << std::boolalpha << root->is_goal() << std::endl;
-    std::cout << root->get_n_moves() << std::endl;
-    std::cout << root->inversions() << std::endl;
-    std::cout << root->manhattan() << std::endl;
-    std::cout << root->getZRow() << std::endl;
-    std::cout << root->getZCol() << std::endl; 
-    root->printBoard();
+    std::cout << std::boolalpha << root.is_solvable() << std::endl;
+    std::cout << std::boolalpha << root.is_goal() << std::endl;
+    std::cout << root.get_n_moves() << std::endl;
+    std::cout << root.inversions() << std::endl;
+    std::cout << root.manhattan() << std::endl;
+    std::cout << root.getZRow() << std::endl;
+    std::cout << root.getZCol() << std::endl; 
+    root.printBoard();
 } 
 
 // -----------------------------------------------------------------------
@@ -42,19 +41,19 @@ int main(int argc, char **argv) {
     bool firstNum = true;
     std::vector<unsigned int> v;
     int num = 0;
-    int nPuzzle = 0;
+    int len = 0;
     // reads all initial board values from the stdin
     while(std::cin >> num) {
     	if (firstNum) {
     		firstNum = false;
-    		nPuzzle = pow(num, 2) - 1;
+    		len = num * num;
     	} else {
     		v.push_back(num);
     	}
     }
     // calls the solver passing the values of the board and the search type
     const unsigned int *b = &v[0];
-    //solve(b, nPuzzle, type);
-    testMethods(b, nPuzzle, type);
+    //solve(b, len, type);
+    testMethods(b, len, type);
     return 0;
 }
