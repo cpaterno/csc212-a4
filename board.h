@@ -30,7 +30,7 @@ class Board {
         // n: number of elements in the board (excluding 0) so 3 by 3 is n = 8
         // m: an initial number of moves
         // type: distance to be used 'm' for manhattan and 'b' for hamming
-        Board(const unsigned int *b, unsigned int n, unsigned int m, char type);
+        Board(unsigned int *b, unsigned int n, unsigned int m, char type);
         // destructor
         ~Board();
 

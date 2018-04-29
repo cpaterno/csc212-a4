@@ -1,0 +1,4132 @@
+puzzles/puzzle00.txt
+The board is solvable -> true
+The board is goal -> true
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 0
+The board's zero row is 9
+The board's zero col is 9
+1 2 3 4 5 6 7 8 9 10 
+11 12 13 14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 28 29 30 
+31 32 33 34 35 36 37 38 39 40 
+41 42 43 44 45 46 47 48 49 50 
+51 52 53 54 55 56 57 58 59 60 
+61 62 63 64 65 66 67 68 69 70 
+71 72 73 74 75 76 77 78 79 80 
+81 82 83 84 85 86 87 88 89 90 
+91 92 93 94 95 96 97 98 99 0 
+
+
+puzzles/puzzle00.txt
+The board is solvable -> true
+The board is goal -> true
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 0
+The board's zero row is 9
+The board's zero col is 9
+1 2 3 4 5 6 7 8 9 10 
+11 12 13 14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 28 29 30 
+31 32 33 34 35 36 37 38 39 40 
+41 42 43 44 45 46 47 48 49 50 
+51 52 53 54 55 56 57 58 59 60 
+61 62 63 64 65 66 67 68 69 70 
+71 72 73 74 75 76 77 78 79 80 
+81 82 83 84 85 86 87 88 89 90 
+91 92 93 94 95 96 97 98 99 0 
+
+
+puzzles/puzzle01.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 1 inversions.
+The board's distance is 1
+The board's zero row is 0
+The board's zero col is 1
+1 0 
+3 2 
+
+
+puzzles/puzzle01.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 1 inversions.
+The board's distance is 1
+The board's zero row is 0
+The board's zero col is 1
+1 0 
+3 2 
+
+
+puzzles/puzzle02.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 2
+The board's zero row is 7
+The board's zero col is 7
+1 2 3 4 5 6 7 8 9 
+10 11 12 13 14 15 16 17 18 
+19 20 21 22 23 24 25 26 27 
+28 29 30 31 32 33 34 35 36 
+37 38 39 40 41 42 43 44 45 
+46 47 48 49 50 51 52 53 54 
+55 56 57 58 59 60 61 62 63 
+64 65 66 67 68 69 70 0 71 
+73 74 75 76 77 78 79 80 72 
+
+
+puzzles/puzzle02.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 2
+The board's zero row is 7
+The board's zero col is 7
+1 2 3 4 5 6 7 8 9 
+10 11 12 13 14 15 16 17 18 
+19 20 21 22 23 24 25 26 27 
+28 29 30 31 32 33 34 35 36 
+37 38 39 40 41 42 43 44 45 
+46 47 48 49 50 51 52 53 54 
+55 56 57 58 59 60 61 62 63 
+64 65 66 67 68 69 70 0 71 
+73 74 75 76 77 78 79 80 72 
+
+
+puzzles/puzzle03.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 1 inversions.
+The board's distance is 3
+The board's zero row is 0
+The board's zero col is 1
+2 0 
+1 3 
+
+
+puzzles/puzzle03.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 1 inversions.
+The board's distance is 3
+The board's zero row is 0
+The board's zero col is 1
+2 0 
+1 3 
+
+
+puzzles/puzzle04.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 4 inversions.
+The board's distance is 4
+The board's zero row is 0
+The board's zero col is 0
+0 1 3 
+4 2 5 
+7 8 6 
+
+
+puzzles/puzzle04.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 4 inversions.
+The board's distance is 4
+The board's zero row is 0
+The board's zero col is 0
+0 1 3 
+4 2 5 
+7 8 6 
+
+
+puzzles/puzzle05.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 5
+The board's zero row is 1
+The board's zero col is 0
+4 1 3 
+0 2 6 
+7 5 8 
+
+
+puzzles/puzzle05.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 5
+The board's zero row is 1
+The board's zero col is 0
+4 1 3 
+0 2 6 
+7 5 8 
+
+
+puzzles/puzzle06.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 9 inversions.
+The board's distance is 6
+The board's zero row is 0
+The board's zero col is 0
+0 1 2 3 
+5 6 7 4 
+9 10 11 8 
+13 14 15 12 
+
+
+puzzles/puzzle06.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 9 inversions.
+The board's distance is 6
+The board's zero row is 0
+The board's zero col is 0
+0 1 2 3 
+5 6 7 4 
+9 10 11 8 
+13 14 15 12 
+
+
+puzzles/puzzle07.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 7
+The board's zero row is 1
+The board's zero col is 0
+1 2 3 
+0 7 6 
+5 4 8 
+
+
+puzzles/puzzle07.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 4
+The board's zero row is 1
+The board's zero col is 0
+1 2 3 
+0 7 6 
+5 4 8 
+
+
+puzzles/puzzle08.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 8
+The board's zero row is 1
+The board's zero col is 1
+2 3 5 
+1 0 4 
+7 8 6 
+
+
+puzzles/puzzle08.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 6
+The board's zero row is 1
+The board's zero col is 1
+2 3 5 
+1 0 4 
+7 8 6 
+
+
+puzzles/puzzle09.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 15 inversions.
+The board's distance is 9
+The board's zero row is 0
+The board's zero col is 1
+2 0 3 4 
+1 10 6 8 
+5 9 7 12 
+13 14 11 15 
+
+
+puzzles/puzzle09.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 15 inversions.
+The board's distance is 9
+The board's zero row is 0
+The board's zero col is 1
+2 0 3 4 
+1 10 6 8 
+5 9 7 12 
+13 14 11 15 
+
+
+puzzles/puzzle10.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 24 inversions.
+The board's distance is 10
+The board's zero row is 7
+The board's zero col is 1
+1 2 3 4 5 6 7 8 9 
+10 11 12 13 14 15 16 17 18 
+19 20 21 22 23 24 25 26 27 
+28 29 30 31 32 33 34 35 36 
+37 38 39 40 41 42 43 44 45 
+46 47 48 49 50 51 52 53 54 
+55 56 57 58 59 60 61 62 63 
+64 0 65 67 68 78 69 70 72 
+73 74 66 75 76 77 79 71 80 
+
+
+puzzles/puzzle10.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 24 inversions.
+The board's distance is 10
+The board's zero row is 7
+The board's zero col is 1
+1 2 3 4 5 6 7 8 9 
+10 11 12 13 14 15 16 17 18 
+19 20 21 22 23 24 25 26 27 
+28 29 30 31 32 33 34 35 36 
+37 38 39 40 41 42 43 44 45 
+46 47 48 49 50 51 52 53 54 
+55 56 57 58 59 60 61 62 63 
+64 0 65 67 68 78 69 70 72 
+73 74 66 75 76 77 79 71 80 
+
+
+puzzles/puzzle11.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 10 inversions.
+The board's distance is 9
+The board's zero row is 0
+The board's zero col is 1
+1 0 2 
+7 5 4 
+8 6 3 
+
+
+puzzles/puzzle11.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 10 inversions.
+The board's distance is 6
+The board's zero row is 0
+The board's zero col is 1
+1 0 2 
+7 5 4 
+8 6 3 
+
+
+puzzles/puzzle12.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 24 inversions.
+The board's distance is 12
+The board's zero row is 2
+The board's zero col is 0
+1 2 3 4 5 
+12 6 8 9 10 
+0 7 13 19 14 
+11 16 17 18 15 
+21 22 23 24 20 
+
+
+puzzles/puzzle12.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 24 inversions.
+The board's distance is 11
+The board's zero row is 2
+The board's zero col is 0
+1 2 3 4 5 
+12 6 8 9 10 
+0 7 13 19 14 
+11 16 17 18 15 
+21 22 23 24 20 
+
+
+puzzles/puzzle13.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 16 inversions.
+The board's distance is 13
+The board's zero row is 1
+The board's zero col is 2
+2 3 4 8 
+1 6 0 12 
+5 10 7 11 
+9 13 14 15 
+
+
+puzzles/puzzle13.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 16 inversions.
+The board's distance is 13
+The board's zero row is 1
+The board's zero col is 2
+2 3 4 8 
+1 6 0 12 
+5 10 7 11 
+9 13 14 15 
+
+
+puzzles/puzzle14.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 26 inversions.
+The board's distance is 8
+The board's zero row is 4
+The board's zero col is 4
+1 2 3 4 5 7 14 
+8 9 10 11 12 13 6 
+15 16 17 18 19 20 21 
+22 23 24 25 26 27 28 
+29 30 31 32 0 33 34 
+36 37 38 39 40 41 35 
+43 44 45 46 47 48 42 
+
+
+puzzles/puzzle14.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 26 inversions.
+The board's distance is 7
+The board's zero row is 4
+The board's zero col is 4
+1 2 3 4 5 7 14 
+8 9 10 11 12 13 6 
+15 16 17 18 19 20 21 
+22 23 24 25 26 27 28 
+29 30 31 32 0 33 34 
+36 37 38 39 40 41 35 
+43 44 45 46 47 48 42 
+
+
+puzzles/puzzle15.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 42 inversions.
+The board's distance is 15
+The board's zero row is 3
+The board's zero col is 0
+1 2 3 4 5 6 7 8 
+9 10 11 12 13 14 15 16 
+17 18 19 20 21 22 23 24 
+0 25 27 28 29 30 31 32 
+34 26 35 36 37 38 39 40 
+33 41 42 43 45 46 47 48 
+49 50 51 44 61 53 54 56 
+57 58 59 52 60 62 55 63 
+
+
+puzzles/puzzle15.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 42 inversions.
+The board's distance is 15
+The board's zero row is 3
+The board's zero col is 0
+1 2 3 4 5 6 7 8 
+9 10 11 12 13 14 15 16 
+17 18 19 20 21 22 23 24 
+0 25 27 28 29 30 31 32 
+34 26 35 36 37 38 39 40 
+33 41 42 43 45 46 47 48 
+49 50 51 44 61 53 54 56 
+57 58 59 52 60 62 55 63 
+
+
+puzzles/puzzle16.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 79 inversions.
+The board's distance is 14
+The board's zero row is 4
+The board's zero col is 6
+1 2 3 4 5 6 7 8 9 10 
+11 12 13 14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 28 29 30 
+31 32 33 34 35 36 47 37 39 40 
+41 42 43 44 45 46 0 38 49 50 
+51 52 53 54 55 56 57 48 59 60 
+61 62 63 64 65 66 67 58 69 80 
+71 72 73 74 75 76 77 68 70 78 
+81 82 83 84 85 86 87 88 79 89 
+91 92 93 94 95 96 97 98 99 90 
+
+
+puzzles/puzzle16.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 79 inversions.
+The board's distance is 12
+The board's zero row is 4
+The board's zero col is 6
+1 2 3 4 5 6 7 8 9 10 
+11 12 13 14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 28 29 30 
+31 32 33 34 35 36 47 37 39 40 
+41 42 43 44 45 46 0 38 49 50 
+51 52 53 54 55 56 57 48 59 60 
+61 62 63 64 65 66 67 58 69 80 
+71 72 73 74 75 76 77 68 70 78 
+81 82 83 84 85 86 87 88 79 89 
+91 92 93 94 95 96 97 98 99 90 
+
+
+puzzles/puzzle17.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 13
+The board's zero row is 2
+The board's zero col is 1
+5 1 8 
+2 7 3 
+4 0 6 
+
+
+puzzles/puzzle17.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 8
+The board's zero row is 2
+The board's zero col is 1
+5 1 8 
+2 7 3 
+4 0 6 
+
+
+puzzles/puzzle18.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 14 inversions.
+The board's distance is 12
+The board's zero row is 2
+The board's zero col is 2
+5 6 2 
+1 8 4 
+7 3 0 
+
+
+puzzles/puzzle18.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 14 inversions.
+The board's distance is 7
+The board's zero row is 2
+The board's zero col is 2
+5 6 2 
+1 8 4 
+7 3 0 
+
+
+puzzles/puzzle19.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 11
+The board's zero row is 1
+The board's zero col is 0
+1 2 7 
+0 4 3 
+6 5 8 
+
+
+puzzles/puzzle19.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 6
+The board's zero row is 1
+The board's zero col is 0
+1 2 7 
+0 4 3 
+6 5 8 
+
+
+puzzles/puzzle20.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 16
+The board's zero row is 1
+The board's zero col is 1
+1 6 4 
+7 0 8 
+2 3 5 
+
+
+puzzles/puzzle20.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 7
+The board's zero row is 1
+The board's zero col is 1
+1 6 4 
+7 0 8 
+2 3 5 
+
+
+puzzles/puzzle21.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 11
+The board's zero row is 1
+The board's zero col is 2
+5 2 3 
+4 7 0 
+8 6 1 
+
+
+puzzles/puzzle21.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 5
+The board's zero row is 1
+The board's zero col is 2
+5 2 3 
+4 7 0 
+8 6 1 
+
+
+puzzles/puzzle22.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 14 inversions.
+The board's distance is 12
+The board's zero row is 2
+The board's zero col is 2
+4 8 2 
+3 6 5 
+1 7 0 
+
+
+puzzles/puzzle22.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 14 inversions.
+The board's distance is 8
+The board's zero row is 2
+The board's zero col is 2
+4 8 2 
+3 6 5 
+1 7 0 
+
+
+puzzles/puzzle23.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 14 inversions.
+The board's distance is 15
+The board's zero row is 0
+The board's zero col is 1
+5 0 4 
+2 3 8 
+7 1 6 
+
+
+puzzles/puzzle23.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 14 inversions.
+The board's distance is 7
+The board's zero row is 0
+The board's zero col is 1
+5 0 4 
+2 3 8 
+7 1 6 
+
+
+puzzles/puzzle24.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 20
+The board's zero row is 1
+The board's zero col is 1
+5 7 4 
+3 0 8 
+1 6 2 
+
+
+puzzles/puzzle24.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 8
+The board's zero row is 1
+The board's zero col is 1
+5 7 4 
+3 0 8 
+1 6 2 
+
+
+puzzles/puzzle25.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 14 inversions.
+The board's distance is 15
+The board's zero row is 2
+The board's zero col is 1
+2 8 5 
+3 6 1 
+7 0 4 
+
+
+puzzles/puzzle25.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 14 inversions.
+The board's distance is 7
+The board's zero row is 2
+The board's zero col is 1
+2 8 5 
+3 6 1 
+7 0 4 
+
+
+puzzles/puzzle26.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 16 inversions.
+The board's distance is 18
+The board's zero row is 0
+The board's zero col is 2
+5 7 0 
+3 2 8 
+1 6 4 
+
+
+puzzles/puzzle26.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 16 inversions.
+The board's distance is 8
+The board's zero row is 0
+The board's zero col is 2
+5 7 0 
+3 2 8 
+1 6 4 
+
+
+puzzles/puzzle27.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 20 inversions.
+The board's distance is 17
+The board's zero row is 2
+The board's zero col is 1
+5 8 7 
+1 4 6 
+3 0 2 
+
+
+puzzles/puzzle27.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 20 inversions.
+The board's distance is 7
+The board's zero row is 2
+The board's zero col is 1
+5 8 7 
+1 4 6 
+3 0 2 
+
+
+puzzles/puzzle28.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 22 inversions.
+The board's distance is 18
+The board's zero row is 1
+The board's zero col is 1
+7 8 5 
+4 0 2 
+3 6 1 
+
+
+puzzles/puzzle28.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 22 inversions.
+The board's distance is 7
+The board's zero row is 1
+The board's zero col is 1
+7 8 5 
+4 0 2 
+3 6 1 
+
+
+puzzles/puzzle29.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 24 inversions.
+The board's distance is 21
+The board's zero row is 0
+The board's zero col is 1
+6 0 5 
+8 7 4 
+3 2 1 
+
+
+puzzles/puzzle29.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 24 inversions.
+The board's distance is 8
+The board's zero row is 0
+The board's zero col is 1
+6 0 5 
+8 7 4 
+3 2 1 
+
+
+puzzles/puzzle2x2-00.txt
+The board is solvable -> true
+The board is goal -> true
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 0
+The board's zero row is 1
+The board's zero col is 1
+1 2 
+3 0 
+
+
+puzzles/puzzle2x2-00.txt
+The board is solvable -> true
+The board is goal -> true
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 0
+The board's zero row is 1
+The board's zero col is 1
+1 2 
+3 0 
+
+
+puzzles/puzzle2x2-01.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 1
+The board's zero row is 1
+The board's zero col is 0
+1 2 
+0 3 
+
+
+puzzles/puzzle2x2-01.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 1
+The board's zero row is 1
+The board's zero col is 0
+1 2 
+0 3 
+
+
+puzzles/puzzle2x2-02.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 1 inversions.
+The board's distance is 2
+The board's zero row is 0
+The board's zero col is 0
+0 1 
+3 2 
+
+
+puzzles/puzzle2x2-02.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 1 inversions.
+The board's distance is 2
+The board's zero row is 0
+The board's zero col is 0
+0 1 
+3 2 
+
+
+puzzles/puzzle2x2-03.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 2 inversions.
+The board's distance is 3
+The board's zero row is 1
+The board's zero col is 0
+3 1 
+0 2 
+
+
+puzzles/puzzle2x2-03.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 2 inversions.
+The board's distance is 3
+The board's zero row is 1
+The board's zero col is 0
+3 1 
+0 2 
+
+
+puzzles/puzzle2x2-04.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 2 inversions.
+The board's distance is 4
+The board's zero row is 1
+The board's zero col is 1
+2 3 
+1 0 
+
+
+puzzles/puzzle2x2-04.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 2 inversions.
+The board's distance is 3
+The board's zero row is 1
+The board's zero col is 1
+2 3 
+1 0 
+
+
+puzzles/puzzle2x2-05.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 2 inversions.
+The board's distance is 5
+The board's zero row is 1
+The board's zero col is 0
+2 3 
+0 1 
+
+
+puzzles/puzzle2x2-05.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 2 inversions.
+The board's distance is 3
+The board's zero row is 1
+The board's zero col is 0
+2 3 
+0 1 
+
+
+puzzles/puzzle2x2-06.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 3 inversions.
+The board's distance is 6
+The board's zero row is 0
+The board's zero col is 0
+0 3 
+2 1 
+
+
+puzzles/puzzle2x2-06.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 3 inversions.
+The board's distance is 3
+The board's zero row is 0
+The board's zero col is 0
+0 3 
+2 1 
+
+
+puzzles/puzzle2x2-unsolvable1.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 3
+The board's zero row is 0
+The board's zero col is 1
+1 0 
+2 3 
+
+
+puzzles/puzzle2x2-unsolvable1.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 2
+The board's zero row is 0
+The board's zero col is 1
+1 0 
+2 3 
+
+
+puzzles/puzzle2x2-unsolvable2.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 4
+The board's zero row is 0
+The board's zero col is 0
+0 1 
+2 3 
+
+
+puzzles/puzzle2x2-unsolvable2.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 3
+The board's zero row is 0
+The board's zero col is 0
+0 1 
+2 3 
+
+
+puzzles/puzzle2x2-unsolvable3.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 3 inversions.
+The board's distance is 2
+The board's zero row is 1
+The board's zero col is 1
+3 2 
+1 0 
+
+
+puzzles/puzzle2x2-unsolvable3.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 3 inversions.
+The board's distance is 2
+The board's zero row is 1
+The board's zero col is 1
+3 2 
+1 0 
+
+
+puzzles/puzzle30.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 20 inversions.
+The board's distance is 16
+The board's zero row is 2
+The board's zero col is 2
+8 4 7 
+1 5 6 
+3 2 0 
+
+
+puzzles/puzzle30.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 20 inversions.
+The board's distance is 6
+The board's zero row is 2
+The board's zero col is 2
+8 4 7 
+1 5 6 
+3 2 0 
+
+
+puzzles/puzzle31.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 24 inversions.
+The board's distance is 21
+The board's zero row is 2
+The board's zero col is 1
+8 6 7 
+2 5 4 
+3 0 1 
+
+
+puzzles/puzzle31.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 24 inversions.
+The board's distance is 7
+The board's zero row is 2
+The board's zero col is 1
+8 6 7 
+2 5 4 
+3 0 1 
+
+
+puzzles/puzzle32.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 16
+The board's zero row is 1
+The board's zero col is 1
+3 1 6 4 
+5 0 9 7 
+10 2 11 8 
+13 15 14 12 
+
+
+puzzles/puzzle32.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 11
+The board's zero row is 1
+The board's zero col is 1
+3 1 6 4 
+5 0 9 7 
+10 2 11 8 
+13 15 14 12 
+
+
+puzzles/puzzle33.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 30 inversions.
+The board's distance is 17
+The board's zero row is 3
+The board's zero col is 2
+1 3 7 11 
+9 6 4 8 
+5 2 12 15 
+13 14 0 10 
+
+
+puzzles/puzzle33.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 30 inversions.
+The board's distance is 10
+The board's zero row is 3
+The board's zero col is 2
+1 3 7 11 
+9 6 4 8 
+5 2 12 15 
+13 14 0 10 
+
+
+puzzles/puzzle34.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 30 inversions.
+The board's distance is 20
+The board's zero row is 3
+The board's zero col is 3
+6 9 7 4 
+2 5 10 8 
+3 11 1 12 
+13 14 15 0 
+
+
+puzzles/puzzle34.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 30 inversions.
+The board's distance is 9
+The board's zero row is 3
+The board's zero col is 3
+6 9 7 4 
+2 5 10 8 
+3 11 1 12 
+13 14 15 0 
+
+
+puzzles/puzzle35.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 35 inversions.
+The board's distance is 23
+The board's zero row is 2
+The board's zero col is 1
+2 6 7 3 
+5 13 4 11 
+10 0 1 15 
+9 14 12 8 
+
+
+puzzles/puzzle35.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 35 inversions.
+The board's distance is 13
+The board's zero row is 2
+The board's zero col is 1
+2 6 7 3 
+5 13 4 11 
+10 0 1 15 
+9 14 12 8 
+
+
+puzzles/puzzle36.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 27 inversions.
+The board's distance is 20
+The board's zero row is 2
+The board's zero col is 2
+5 3 1 4 
+10 2 8 7 
+14 13 0 11 
+6 9 15 12 
+
+
+puzzles/puzzle36.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 27 inversions.
+The board's distance is 13
+The board's zero row is 2
+The board's zero col is 2
+5 3 1 4 
+10 2 8 7 
+14 13 0 11 
+6 9 15 12 
+
+
+puzzles/puzzle37.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 25 inversions.
+The board's distance is 29
+The board's zero row is 0
+The board's zero col is 1
+2 0 5 4 
+10 3 6 7 
+13 1 9 15 
+8 11 12 14 
+
+
+puzzles/puzzle37.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 25 inversions.
+The board's distance is 14
+The board's zero row is 0
+The board's zero col is 1
+2 0 5 4 
+10 3 6 7 
+13 1 9 15 
+8 11 12 14 
+
+
+puzzles/puzzle38.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 21 inversions.
+The board's distance is 22
+The board's zero row is 2
+The board's zero col is 2
+13 1 5 4 
+2 3 6 8 
+7 10 0 9 
+11 14 15 12 
+
+
+puzzles/puzzle38.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 21 inversions.
+The board's distance is 10
+The board's zero row is 2
+The board's zero col is 2
+13 1 5 4 
+2 3 6 8 
+7 10 0 9 
+11 14 15 12 
+
+
+puzzles/puzzle39.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 45 inversions.
+The board's distance is 29
+The board's zero row is 0
+The board's zero col is 1
+11 0 4 7 
+2 15 1 8 
+5 14 9 3 
+13 6 12 10 
+
+
+puzzles/puzzle39.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 45 inversions.
+The board's distance is 13
+The board's zero row is 0
+The board's zero col is 1
+11 0 4 7 
+2 15 1 8 
+5 14 9 3 
+13 6 12 10 
+
+
+puzzles/puzzle3x3-00.txt
+The board is solvable -> true
+The board is goal -> true
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 0
+The board's zero row is 2
+The board's zero col is 2
+1 2 3 
+4 5 6 
+7 8 0 
+
+
+puzzles/puzzle3x3-00.txt
+The board is solvable -> true
+The board is goal -> true
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 0
+The board's zero row is 2
+The board's zero col is 2
+1 2 3 
+4 5 6 
+7 8 0 
+
+
+puzzles/puzzle3x3-01.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 2 inversions.
+The board's distance is 1
+The board's zero row is 1
+The board's zero col is 2
+1 2 3 
+4 5 0 
+7 8 6 
+
+
+puzzles/puzzle3x3-01.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 2 inversions.
+The board's distance is 1
+The board's zero row is 1
+The board's zero col is 2
+1 2 3 
+4 5 0 
+7 8 6 
+
+
+puzzles/puzzle3x3-02.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 2 inversions.
+The board's distance is 2
+The board's zero row is 1
+The board's zero col is 1
+1 2 3 
+4 0 5 
+7 8 6 
+
+
+puzzles/puzzle3x3-02.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 2 inversions.
+The board's distance is 2
+The board's zero row is 1
+The board's zero col is 1
+1 2 3 
+4 0 5 
+7 8 6 
+
+
+puzzles/puzzle3x3-03.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 2 inversions.
+The board's distance is 3
+The board's zero row is 1
+The board's zero col is 0
+1 2 3 
+0 4 5 
+7 8 6 
+
+
+puzzles/puzzle3x3-03.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 2 inversions.
+The board's distance is 3
+The board's zero row is 1
+The board's zero col is 0
+1 2 3 
+0 4 5 
+7 8 6 
+
+
+puzzles/puzzle3x3-04.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 4 inversions.
+The board's distance is 4
+The board's zero row is 0
+The board's zero col is 0
+0 1 2 
+4 5 3 
+7 8 6 
+
+
+puzzles/puzzle3x3-04.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 4 inversions.
+The board's distance is 4
+The board's zero row is 0
+The board's zero col is 0
+0 1 2 
+4 5 3 
+7 8 6 
+
+
+puzzles/puzzle3x3-05.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 4 inversions.
+The board's distance is 5
+The board's zero row is 0
+The board's zero col is 1
+1 0 2 
+4 6 3 
+7 5 8 
+
+
+puzzles/puzzle3x3-05.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 4 inversions.
+The board's distance is 5
+The board's zero row is 0
+The board's zero col is 1
+1 0 2 
+4 6 3 
+7 5 8 
+
+
+puzzles/puzzle3x3-06.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 6
+The board's zero row is 0
+The board's zero col is 2
+1 2 0 
+4 8 3 
+7 6 5 
+
+
+puzzles/puzzle3x3-06.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 4
+The board's zero row is 0
+The board's zero col is 2
+1 2 0 
+4 8 3 
+7 6 5 
+
+
+puzzles/puzzle3x3-07.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 7
+The board's zero row is 1
+The board's zero col is 0
+1 2 3 
+0 4 8 
+7 6 5 
+
+
+puzzles/puzzle3x3-07.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 4
+The board's zero row is 1
+The board's zero col is 0
+1 2 3 
+0 4 8 
+7 6 5 
+
+
+puzzles/puzzle3x3-08.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 8
+The board's zero row is 0
+The board's zero col is 0
+0 4 3 
+2 1 6 
+7 5 8 
+
+
+puzzles/puzzle3x3-08.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 5
+The board's zero row is 0
+The board's zero col is 0
+0 4 3 
+2 1 6 
+7 5 8 
+
+
+puzzles/puzzle3x3-09.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 9
+The board's zero row is 2
+The board's zero col is 1
+1 3 6 
+5 2 8 
+4 0 7 
+
+
+puzzles/puzzle3x3-09.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 7
+The board's zero row is 2
+The board's zero col is 1
+1 3 6 
+5 2 8 
+4 0 7 
+
+
+puzzles/puzzle3x3-10.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 10
+The board's zero row is 0
+The board's zero col is 0
+0 4 1 
+5 3 2 
+7 8 6 
+
+
+puzzles/puzzle3x3-10.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 6
+The board's zero row is 0
+The board's zero col is 0
+0 4 1 
+5 3 2 
+7 8 6 
+
+
+puzzles/puzzle3x3-11.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 9
+The board's zero row is 2
+The board's zero col is 1
+1 3 5 
+7 2 6 
+8 0 4 
+
+
+puzzles/puzzle3x3-11.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 6
+The board's zero row is 2
+The board's zero col is 1
+1 3 5 
+7 2 6 
+8 0 4 
+
+
+puzzles/puzzle3x3-12.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 4 inversions.
+The board's distance is 10
+The board's zero row is 1
+The board's zero col is 1
+4 1 2 
+3 0 6 
+5 7 8 
+
+
+puzzles/puzzle3x3-12.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 4 inversions.
+The board's distance is 7
+The board's zero row is 1
+The board's zero col is 1
+4 1 2 
+3 0 6 
+5 7 8 
+
+
+puzzles/puzzle3x3-13.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 10 inversions.
+The board's distance is 11
+The board's zero row is 1
+The board's zero col is 0
+4 3 1 
+0 7 2 
+8 5 6 
+
+
+puzzles/puzzle3x3-13.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 10 inversions.
+The board's distance is 8
+The board's zero row is 1
+The board's zero col is 0
+4 3 1 
+0 7 2 
+8 5 6 
+
+
+puzzles/puzzle3x3-14.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 14
+The board's zero row is 1
+The board's zero col is 1
+3 4 6 
+2 0 8 
+1 7 5 
+
+
+puzzles/puzzle3x3-14.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 8
+The board's zero row is 1
+The board's zero col is 1
+3 4 6 
+2 0 8 
+1 7 5 
+
+
+puzzles/puzzle3x3-15.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 13
+The board's zero row is 0
+The board's zero col is 1
+2 0 8 
+1 3 5 
+4 6 7 
+
+
+puzzles/puzzle3x3-15.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 8
+The board's zero row is 0
+The board's zero col is 1
+2 0 8 
+1 3 5 
+4 6 7 
+
+
+puzzles/puzzle3x3-16.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 10 inversions.
+The board's distance is 8
+The board's zero row is 2
+The board's zero col is 2
+5 2 1 
+4 8 3 
+7 6 0 
+
+
+puzzles/puzzle3x3-16.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 10 inversions.
+The board's distance is 5
+The board's zero row is 2
+The board's zero col is 2
+5 2 1 
+4 8 3 
+7 6 0 
+
+
+puzzles/puzzle3x3-17.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 7
+The board's zero row is 1
+The board's zero col is 0
+4 3 1 
+0 2 6 
+7 8 5 
+
+
+puzzles/puzzle3x3-17.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 8 inversions.
+The board's distance is 5
+The board's zero row is 1
+The board's zero col is 0
+4 3 1 
+0 2 6 
+7 8 5 
+
+
+puzzles/puzzle3x3-18.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 12
+The board's zero row is 1
+The board's zero col is 1
+1 4 3 
+7 0 8 
+6 5 2 
+
+
+puzzles/puzzle3x3-18.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 6
+The board's zero row is 1
+The board's zero col is 1
+1 4 3 
+7 0 8 
+6 5 2 
+
+
+puzzles/puzzle3x3-19.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 20 inversions.
+The board's distance is 19
+The board's zero row is 0
+The board's zero col is 1
+7 0 4 
+8 5 1 
+6 3 2 
+
+
+puzzles/puzzle3x3-19.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 20 inversions.
+The board's distance is 7
+The board's zero row is 0
+The board's zero col is 1
+7 0 4 
+8 5 1 
+6 3 2 
+
+
+puzzles/puzzle3x3-20.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 12
+The board's zero row is 2
+The board's zero col is 0
+7 4 3 
+2 8 6 
+0 5 1 
+
+
+puzzles/puzzle3x3-20.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 6
+The board's zero row is 2
+The board's zero col is 0
+7 4 3 
+2 8 6 
+0 5 1 
+
+
+puzzles/puzzle3x3-21.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 13
+The board's zero row is 1
+The board's zero col is 2
+8 7 2 
+1 5 0 
+4 6 3 
+
+
+puzzles/puzzle3x3-21.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 7
+The board's zero row is 1
+The board's zero col is 2
+8 7 2 
+1 5 0 
+4 6 3 
+
+
+puzzles/puzzle3x3-22.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 14 inversions.
+The board's distance is 12
+The board's zero row is 1
+The board's zero col is 1
+5 3 6 
+4 0 7 
+1 8 2 
+
+
+puzzles/puzzle3x3-22.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 14 inversions.
+The board's distance is 6
+The board's zero row is 1
+The board's zero col is 1
+5 3 6 
+4 0 7 
+1 8 2 
+
+
+puzzles/puzzle3x3-23.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 15
+The board's zero row is 0
+The board's zero col is 1
+6 0 8 
+4 3 5 
+1 2 7 
+
+
+puzzles/puzzle3x3-23.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 7
+The board's zero row is 0
+The board's zero col is 1
+6 0 8 
+4 3 5 
+1 2 7 
+
+
+puzzles/puzzle3x3-24.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 14 inversions.
+The board's distance is 12
+The board's zero row is 2
+The board's zero col is 0
+6 5 3 
+4 1 7 
+0 2 8 
+
+
+puzzles/puzzle3x3-24.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 14 inversions.
+The board's distance is 6
+The board's zero row is 2
+The board's zero col is 0
+6 5 3 
+4 1 7 
+0 2 8 
+
+
+puzzles/puzzle3x3-25.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 15
+The board's zero row is 2
+The board's zero col is 1
+8 3 5 
+6 4 2 
+1 0 7 
+
+
+puzzles/puzzle3x3-25.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 8
+The board's zero row is 2
+The board's zero col is 1
+8 3 5 
+6 4 2 
+1 0 7 
+
+
+puzzles/puzzle3x3-26.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 20 inversions.
+The board's distance is 18
+The board's zero row is 2
+The board's zero col is 0
+4 8 7 
+5 3 1 
+0 6 2 
+
+
+puzzles/puzzle3x3-26.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 20 inversions.
+The board's distance is 8
+The board's zero row is 2
+The board's zero col is 0
+4 8 7 
+5 3 1 
+0 6 2 
+
+
+puzzles/puzzle3x3-27.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 10 inversions.
+The board's distance is 13
+The board's zero row is 1
+The board's zero col is 0
+1 6 4 
+0 3 5 
+8 2 7 
+
+
+puzzles/puzzle3x3-27.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 10 inversions.
+The board's distance is 7
+The board's zero row is 1
+The board's zero col is 0
+1 6 4 
+0 3 5 
+8 2 7 
+
+
+puzzles/puzzle3x3-28.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 14
+The board's zero row is 2
+The board's zero col is 2
+6 3 8 
+5 4 1 
+7 2 0 
+
+
+puzzles/puzzle3x3-28.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 7
+The board's zero row is 2
+The board's zero col is 2
+6 3 8 
+5 4 1 
+7 2 0 
+
+
+puzzles/puzzle3x3-29.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 10 inversions.
+The board's distance is 15
+The board's zero row is 1
+The board's zero col is 0
+1 8 5 
+0 2 4 
+3 6 7 
+
+
+puzzles/puzzle3x3-29.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 10 inversions.
+The board's distance is 7
+The board's zero row is 1
+The board's zero col is 0
+1 8 5 
+0 2 4 
+3 6 7 
+
+
+puzzles/puzzle3x3-30.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 22 inversions.
+The board's distance is 22
+The board's zero row is 1
+The board's zero col is 1
+8 6 7 
+2 0 4 
+3 5 1 
+
+
+puzzles/puzzle3x3-30.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 22 inversions.
+The board's distance is 8
+The board's zero row is 1
+The board's zero col is 1
+8 6 7 
+2 0 4 
+3 5 1 
+
+
+puzzles/puzzle3x3-31.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 22 inversions.
+The board's distance is 21
+The board's zero row is 1
+The board's zero col is 2
+6 4 7 
+8 5 0 
+3 2 1 
+
+
+puzzles/puzzle3x3-31.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 22 inversions.
+The board's distance is 7
+The board's zero row is 1
+The board's zero col is 2
+6 4 7 
+8 5 0 
+3 2 1 
+
+
+puzzles/puzzle3x3-unsolvable.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 1 inversions.
+The board's distance is 2
+The board's zero row is 2
+The board's zero col is 2
+1 2 3 
+4 6 5 
+7 8 0 
+
+
+puzzles/puzzle3x3-unsolvable.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 1 inversions.
+The board's distance is 2
+The board's zero row is 2
+The board's zero col is 2
+1 2 3 
+4 6 5 
+7 8 0 
+
+
+puzzles/puzzle3x3-unsolvable1.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 1 inversions.
+The board's distance is 2
+The board's zero row is 2
+The board's zero col is 2
+1 2 3 
+4 6 5 
+7 8 0 
+
+
+puzzles/puzzle3x3-unsolvable1.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 1 inversions.
+The board's distance is 2
+The board's zero row is 2
+The board's zero col is 2
+1 2 3 
+4 6 5 
+7 8 0 
+
+
+puzzles/puzzle3x3-unsolvable2.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 23 inversions.
+The board's distance is 18
+The board's zero row is 2
+The board's zero col is 2
+8 6 7 
+2 5 4 
+1 3 0 
+
+
+puzzles/puzzle3x3-unsolvable2.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 23 inversions.
+The board's distance is 7
+The board's zero row is 2
+The board's zero col is 2
+8 6 7 
+2 5 4 
+1 3 0 
+
+
+puzzles/puzzle40.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 46 inversions.
+The board's distance is 30
+The board's zero row is 3
+The board's zero col is 3
+6 5 11 4 
+10 13 2 1 
+9 15 7 3 
+14 12 8 0 
+
+
+puzzles/puzzle40.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 46 inversions.
+The board's distance is 13
+The board's zero row is 3
+The board's zero col is 3
+6 5 11 4 
+10 13 2 1 
+9 15 7 3 
+14 12 8 0 
+
+
+puzzles/puzzle41.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 46 inversions.
+The board's distance is 33
+The board's zero row is 1
+The board's zero col is 2
+3 8 2 4 5 
+1 6 0 9 14 
+19 7 12 10 13 
+11 21 22 23 15 
+17 16 18 24 20 
+
+
+puzzles/puzzle41.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 46 inversions.
+The board's distance is 20
+The board's zero row is 1
+The board's zero col is 2
+3 8 2 4 5 
+1 6 0 9 14 
+19 7 12 10 13 
+11 21 22 23 15 
+17 16 18 24 20 
+
+
+puzzles/puzzle42.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 48 inversions.
+The board's distance is 28
+The board's zero row is 1
+The board's zero col is 1
+2 8 7 11 
+5 0 4 15 
+13 9 14 3 
+1 10 6 12 
+
+
+puzzles/puzzle42.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 48 inversions.
+The board's distance is 14
+The board's zero row is 1
+The board's zero col is 1
+2 8 7 11 
+5 0 4 15 
+13 9 14 3 
+1 10 6 12 
+
+
+puzzles/puzzle43.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 50 inversions.
+The board's distance is 33
+The board's zero row is 1
+The board's zero col is 0
+14 13 5 3 
+0 1 8 12 
+6 2 4 10 
+11 9 15 7 
+
+
+puzzles/puzzle43.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 50 inversions.
+The board's distance is 14
+The board's zero row is 1
+The board's zero col is 0
+14 13 5 3 
+0 1 8 12 
+6 2 4 10 
+11 9 15 7 
+
+
+puzzles/puzzle44.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 60 inversions.
+The board's distance is 34
+The board's zero row is 1
+The board's zero col is 3
+6 7 5 10 15 
+3 2 8 0 4 
+1 12 20 13 9 
+11 16 19 14 24 
+21 17 22 18 23 
+
+
+puzzles/puzzle44.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 60 inversions.
+The board's distance is 21
+The board's zero row is 1
+The board's zero col is 3
+6 7 5 10 15 
+3 2 8 0 4 
+1 12 20 13 9 
+11 16 19 14 24 
+21 17 22 18 23 
+
+
+puzzles/puzzle45.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 48 inversions.
+The board's distance is 33
+The board's zero row is 1
+The board's zero col is 0
+9 2 8 11 
+0 5 13 7 
+15 1 4 10 
+3 14 6 12 
+
+
+puzzles/puzzle45.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 48 inversions.
+The board's distance is 13
+The board's zero row is 1
+The board's zero col is 0
+9 2 8 11 
+0 5 13 7 
+15 1 4 10 
+3 14 6 12 
+
+
+puzzles/puzzle46.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 53 inversions.
+The board's distance is 38
+The board's zero row is 2
+The board's zero col is 0
+6 8 4 12 
+7 15 10 14 
+0 3 2 11 
+1 5 9 13 
+
+
+puzzles/puzzle46.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 53 inversions.
+The board's distance is 15
+The board's zero row is 2
+The board's zero col is 0
+6 8 4 12 
+7 15 10 14 
+0 3 2 11 
+1 5 9 13 
+
+
+puzzles/puzzle47.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 47 inversions.
+The board's distance is 31
+The board's zero row is 0
+The board's zero col is 3
+12 4 7 0 
+2 10 8 3 
+1 15 11 14 
+9 6 5 13 
+
+
+puzzles/puzzle47.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 47 inversions.
+The board's distance is 14
+The board's zero row is 0
+The board's zero col is 3
+12 4 7 0 
+2 10 8 3 
+1 15 11 14 
+9 6 5 13 
+
+
+puzzles/puzzle48.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 47 inversions.
+The board's distance is 38
+The board's zero row is 2
+The board's zero col is 2
+7 4 10 8 
+3 13 2 14 
+11 5 0 15 
+6 1 9 12 
+
+
+puzzles/puzzle48.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 47 inversions.
+The board's distance is 15
+The board's zero row is 2
+The board's zero col is 2
+7 4 10 8 
+3 13 2 14 
+11 5 0 15 
+6 1 9 12 
+
+
+puzzles/puzzle49.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 52 inversions.
+The board's distance is 35
+The board's zero row is 3
+The board's zero col is 0
+13 1 10 4 
+8 12 6 3 
+15 9 5 14 
+0 7 2 11 
+
+
+puzzles/puzzle49.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 52 inversions.
+The board's distance is 14
+The board's zero row is 3
+The board's zero col is 0
+13 1 10 4 
+8 12 6 3 
+15 9 5 14 
+0 7 2 11 
+
+
+puzzles/puzzle4x4-00.txt
+The board is solvable -> true
+The board is goal -> true
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 0
+The board's zero row is 3
+The board's zero col is 3
+1 2 3 4 
+5 6 7 8 
+9 10 11 12 
+13 14 15 0 
+
+
+puzzles/puzzle4x4-00.txt
+The board is solvable -> true
+The board is goal -> true
+0 moves were made 
+The board has 0 inversions.
+The board's distance is 0
+The board's zero row is 3
+The board's zero col is 3
+1 2 3 4 
+5 6 7 8 
+9 10 11 12 
+13 14 15 0 
+
+
+puzzles/puzzle4x4-01.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 3 inversions.
+The board's distance is 1
+The board's zero row is 2
+The board's zero col is 3
+1 2 3 4 
+5 6 7 8 
+9 10 11 0 
+13 14 15 12 
+
+
+puzzles/puzzle4x4-01.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 3 inversions.
+The board's distance is 1
+The board's zero row is 2
+The board's zero col is 3
+1 2 3 4 
+5 6 7 8 
+9 10 11 0 
+13 14 15 12 
+
+
+puzzles/puzzle4x4-02.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 2
+The board's zero row is 1
+The board's zero col is 3
+1 2 3 4 
+5 6 7 0 
+9 10 11 8 
+13 14 15 12 
+
+
+puzzles/puzzle4x4-02.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 2
+The board's zero row is 1
+The board's zero col is 3
+1 2 3 4 
+5 6 7 0 
+9 10 11 8 
+13 14 15 12 
+
+
+puzzles/puzzle4x4-03.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 3
+The board's zero row is 1
+The board's zero col is 2
+1 2 3 4 
+5 6 0 8 
+9 10 7 12 
+13 14 11 15 
+
+
+puzzles/puzzle4x4-03.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 3
+The board's zero row is 1
+The board's zero col is 2
+1 2 3 4 
+5 6 0 8 
+9 10 7 12 
+13 14 11 15 
+
+
+puzzles/puzzle4x4-04.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 4
+The board's zero row is 1
+The board's zero col is 1
+1 2 3 4 
+5 0 7 8 
+9 6 11 12 
+13 10 14 15 
+
+
+puzzles/puzzle4x4-04.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 6 inversions.
+The board's distance is 4
+The board's zero row is 1
+The board's zero col is 1
+1 2 3 4 
+5 0 7 8 
+9 6 11 12 
+13 10 14 15 
+
+
+puzzles/puzzle4x4-05.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 3 inversions.
+The board's distance is 5
+The board's zero row is 2
+The board's zero col is 1
+1 2 3 4 
+5 6 7 8 
+10 0 11 12 
+9 13 14 15 
+
+
+puzzles/puzzle4x4-05.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 3 inversions.
+The board's distance is 5
+The board's zero row is 2
+The board's zero col is 1
+1 2 3 4 
+5 6 7 8 
+10 0 11 12 
+9 13 14 15 
+
+
+puzzles/puzzle4x4-06.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 6
+The board's zero row is 1
+The board's zero col is 1
+1 6 2 4 
+5 0 3 8 
+9 10 7 11 
+13 14 15 12 
+
+
+puzzles/puzzle4x4-06.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 6
+The board's zero row is 1
+The board's zero col is 1
+1 6 2 4 
+5 0 3 8 
+9 10 7 11 
+13 14 15 12 
+
+
+puzzles/puzzle4x4-07.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 9 inversions.
+The board's distance is 7
+The board's zero row is 2
+The board's zero col is 1
+1 2 3 4 
+6 10 7 8 
+5 0 11 12 
+9 13 14 15 
+
+
+puzzles/puzzle4x4-07.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 9 inversions.
+The board's distance is 7
+The board's zero row is 2
+The board's zero col is 1
+1 2 3 4 
+6 10 7 8 
+5 0 11 12 
+9 13 14 15 
+
+
+puzzles/puzzle4x4-08.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 8
+The board's zero row is 3
+The board's zero col is 1
+1 2 3 4 
+5 10 6 8 
+13 9 7 12 
+14 0 11 15 
+
+
+puzzles/puzzle4x4-08.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 8
+The board's zero row is 3
+The board's zero col is 1
+1 2 3 4 
+5 10 6 8 
+13 9 7 12 
+14 0 11 15 
+
+
+puzzles/puzzle4x4-09.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 9 inversions.
+The board's distance is 9
+The board's zero row is 0
+The board's zero col is 3
+2 3 4 0 
+1 6 7 8 
+5 10 11 12 
+9 13 14 15 
+
+
+puzzles/puzzle4x4-09.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 9 inversions.
+The board's distance is 9
+The board's zero row is 0
+The board's zero col is 3
+2 3 4 0 
+1 6 7 8 
+5 10 11 12 
+9 13 14 15 
+
+
+puzzles/puzzle4x4-10.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 10
+The board's zero row is 1
+The board's zero col is 3
+1 2 4 12 
+5 6 3 0 
+9 10 8 7 
+13 14 11 15 
+
+
+puzzles/puzzle4x4-10.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 7
+The board's zero row is 1
+The board's zero col is 3
+1 2 4 12 
+5 6 3 0 
+9 10 8 7 
+13 14 11 15 
+
+
+puzzles/puzzle4x4-11.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 21 inversions.
+The board's distance is 11
+The board's zero row is 2
+The board's zero col is 1
+5 1 3 4 
+9 2 7 8 
+13 0 10 12 
+14 6 11 15 
+
+
+puzzles/puzzle4x4-11.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 21 inversions.
+The board's distance is 10
+The board's zero row is 2
+The board's zero col is 1
+5 1 3 4 
+9 2 7 8 
+13 0 10 12 
+14 6 11 15 
+
+
+puzzles/puzzle4x4-12.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 19 inversions.
+The board's distance is 12
+The board's zero row is 2
+The board's zero col is 2
+5 1 2 4 
+9 6 3 7 
+13 10 0 8 
+14 15 11 12 
+
+
+puzzles/puzzle4x4-12.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 19 inversions.
+The board's distance is 12
+The board's zero row is 2
+The board's zero col is 2
+5 1 2 4 
+9 6 3 7 
+13 10 0 8 
+14 15 11 12 
+
+
+puzzles/puzzle4x4-13.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 13
+The board's zero row is 1
+The board's zero col is 2
+5 3 4 8 
+2 1 0 7 
+9 6 10 11 
+13 14 15 12 
+
+
+puzzles/puzzle4x4-13.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 18 inversions.
+The board's distance is 11
+The board's zero row is 1
+The board's zero col is 2
+5 3 4 8 
+2 1 0 7 
+9 6 10 11 
+13 14 15 12 
+
+
+puzzles/puzzle4x4-14.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 15 inversions.
+The board's distance is 12
+The board's zero row is 2
+The board's zero col is 0
+1 2 8 3 
+5 11 6 4 
+0 10 7 12 
+9 13 14 15 
+
+
+puzzles/puzzle4x4-14.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 15 inversions.
+The board's distance is 10
+The board's zero row is 2
+The board's zero col is 0
+1 2 8 3 
+5 11 6 4 
+0 10 7 12 
+9 13 14 15 
+
+
+puzzles/puzzle4x4-15.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 20 inversions.
+The board's distance is 11
+The board's zero row is 3
+The board's zero col is 2
+5 1 3 4 
+13 2 7 8 
+6 10 11 12 
+14 9 0 15 
+
+
+puzzles/puzzle4x4-15.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 20 inversions.
+The board's distance is 8
+The board's zero row is 3
+The board's zero col is 2
+5 1 3 4 
+13 2 7 8 
+6 10 11 12 
+14 9 0 15 
+
+
+puzzles/puzzle4x4-16.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 22 inversions.
+The board's distance is 16
+The board's zero row is 1
+The board's zero col is 1
+5 1 2 4 
+6 0 10 7 
+13 11 3 8 
+14 9 15 12 
+
+
+puzzles/puzzle4x4-16.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 22 inversions.
+The board's distance is 13
+The board's zero row is 1
+The board's zero col is 1
+5 1 2 4 
+6 0 10 7 
+13 11 3 8 
+14 9 15 12 
+
+
+puzzles/puzzle4x4-17.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 21 inversions.
+The board's distance is 15
+The board's zero row is 0
+The board's zero col is 3
+5 2 4 0 
+6 1 3 8 
+13 11 7 12 
+10 9 14 15 
+
+
+puzzles/puzzle4x4-17.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 21 inversions.
+The board's distance is 12
+The board's zero row is 0
+The board's zero col is 3
+5 2 4 0 
+6 1 3 8 
+13 11 7 12 
+10 9 14 15 
+
+
+puzzles/puzzle4x4-18.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 17 inversions.
+The board's distance is 10
+The board's zero row is 2
+The board's zero col is 2
+2 5 3 4 
+1 7 11 8 
+9 6 0 12 
+13 14 15 10 
+
+
+puzzles/puzzle4x4-18.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 17 inversions.
+The board's distance is 7
+The board's zero row is 2
+The board's zero col is 2
+2 5 3 4 
+1 7 11 8 
+9 6 0 12 
+13 14 15 10 
+
+
+puzzles/puzzle4x4-19.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 15 inversions.
+The board's distance is 15
+The board's zero row is 2
+The board's zero col is 1
+3 7 2 4 
+1 5 10 8 
+6 0 11 12 
+9 13 14 15 
+
+
+puzzles/puzzle4x4-19.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 15 inversions.
+The board's distance is 11
+The board's zero row is 2
+The board's zero col is 1
+3 7 2 4 
+1 5 10 8 
+6 0 11 12 
+9 13 14 15 
+
+
+puzzles/puzzle4x4-20.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 28 inversions.
+The board's distance is 20
+The board's zero row is 3
+The board's zero col is 1
+6 3 7 4 
+2 9 10 8 
+1 5 12 15 
+13 0 14 11 
+
+
+puzzles/puzzle4x4-20.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 28 inversions.
+The board's distance is 12
+The board's zero row is 3
+The board's zero col is 1
+6 3 7 4 
+2 9 10 8 
+1 5 12 15 
+13 0 14 11 
+
+
+puzzles/puzzle4x4-21.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 15 inversions.
+The board's distance is 15
+The board's zero row is 0
+The board's zero col is 3
+3 7 1 0 
+6 2 8 4 
+5 10 11 12 
+9 13 14 15 
+
+
+puzzles/puzzle4x4-21.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 15 inversions.
+The board's distance is 12
+The board's zero row is 0
+The board's zero col is 3
+3 7 1 0 
+6 2 8 4 
+5 10 11 12 
+9 13 14 15 
+
+
+puzzles/puzzle4x4-22.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 23 inversions.
+The board's distance is 20
+The board's zero row is 2
+The board's zero col is 2
+1 4 8 3 
+7 2 10 11 
+5 6 0 15 
+9 13 14 12 
+
+
+puzzles/puzzle4x4-22.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 23 inversions.
+The board's distance is 14
+The board's zero row is 2
+The board's zero col is 2
+1 4 8 3 
+7 2 10 11 
+5 6 0 15 
+9 13 14 12 
+
+
+puzzles/puzzle4x4-23.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 19 inversions.
+The board's distance is 15
+The board's zero row is 2
+The board's zero col is 1
+1 2 3 4 
+5 6 14 8 
+13 0 9 11 
+10 12 15 7 
+
+
+puzzles/puzzle4x4-23.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 19 inversions.
+The board's distance is 7
+The board's zero row is 2
+The board's zero col is 1
+1 2 3 4 
+5 6 14 8 
+13 0 9 11 
+10 12 15 7 
+
+
+puzzles/puzzle4x4-24.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 24 inversions.
+The board's distance is 20
+The board's zero row is 3
+The board's zero col is 1
+9 5 1 2 
+6 4 8 3 
+10 14 7 11 
+13 0 15 12 
+
+
+puzzles/puzzle4x4-24.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 24 inversions.
+The board's distance is 13
+The board's zero row is 3
+The board's zero col is 1
+9 5 1 2 
+6 4 8 3 
+10 14 7 11 
+13 0 15 12 
+
+
+puzzles/puzzle4x4-25.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 25 inversions.
+The board's distance is 19
+The board's zero row is 2
+The board's zero col is 3
+2 5 1 3 
+9 6 12 4 
+10 14 8 0 
+13 11 15 7 
+
+
+puzzles/puzzle4x4-25.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 25 inversions.
+The board's distance is 12
+The board's zero row is 2
+The board's zero col is 3
+2 5 1 3 
+9 6 12 4 
+10 14 8 0 
+13 11 15 7 
+
+
+puzzles/puzzle4x4-26.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 33 inversions.
+The board's distance is 20
+The board's zero row is 2
+The board's zero col is 2
+1 10 6 4 
+5 9 2 8 
+13 12 0 7 
+14 11 3 15 
+
+
+puzzles/puzzle4x4-26.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 33 inversions.
+The board's distance is 11
+The board's zero row is 2
+The board's zero col is 2
+1 10 6 4 
+5 9 2 8 
+13 12 0 7 
+14 11 3 15 
+
+
+puzzles/puzzle4x4-27.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 21 inversions.
+The board's distance is 19
+The board's zero row is 0
+The board's zero col is 3
+1 2 3 0 
+5 12 7 4 
+13 6 14 9 
+10 8 11 15 
+
+
+puzzles/puzzle4x4-27.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 21 inversions.
+The board's distance is 10
+The board's zero row is 0
+The board's zero col is 3
+1 2 3 0 
+5 12 7 4 
+13 6 14 9 
+10 8 11 15 
+
+
+puzzles/puzzle4x4-28.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 21 inversions.
+The board's distance is 18
+The board's zero row is 2
+The board's zero col is 2
+2 5 4 7 
+9 1 3 8 
+11 10 0 6 
+14 13 15 12 
+
+
+puzzles/puzzle4x4-28.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 21 inversions.
+The board's distance is 12
+The board's zero row is 2
+The board's zero col is 2
+2 5 4 7 
+9 1 3 8 
+11 10 0 6 
+14 13 15 12 
+
+
+puzzles/puzzle4x4-29.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 31 inversions.
+The board's distance is 21
+The board's zero row is 0
+The board's zero col is 3
+1 8 3 0 
+5 7 4 12 
+14 6 2 15 
+9 13 10 11 
+
+
+puzzles/puzzle4x4-29.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 31 inversions.
+The board's distance is 12
+The board's zero row is 0
+The board's zero col is 3
+1 8 3 0 
+5 7 4 12 
+14 6 2 15 
+9 13 10 11 
+
+
+puzzles/puzzle4x4-30.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 35 inversions.
+The board's distance is 26
+The board's zero row is 2
+The board's zero col is 0
+2 4 8 12 
+1 7 3 14 
+0 6 15 11 
+5 9 13 10 
+
+
+puzzles/puzzle4x4-30.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 35 inversions.
+The board's distance is 15
+The board's zero row is 2
+The board's zero col is 0
+2 4 8 12 
+1 7 3 14 
+0 6 15 11 
+5 9 13 10 
+
+
+puzzles/puzzle4x4-31.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 26 inversions.
+The board's distance is 17
+The board's zero row is 3
+The board's zero col is 0
+5 1 3 2 
+10 6 15 7 
+9 8 11 4 
+0 13 14 12 
+
+
+puzzles/puzzle4x4-31.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 26 inversions.
+The board's distance is 11
+The board's zero row is 3
+The board's zero col is 0
+5 1 3 2 
+10 6 15 7 
+9 8 11 4 
+0 13 14 12 
+
+
+puzzles/puzzle4x4-32.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 24 inversions.
+The board's distance is 14
+The board's zero row is 1
+The board's zero col is 1
+6 2 3 8 
+5 0 7 11 
+1 10 4 12 
+13 14 9 15 
+
+
+puzzles/puzzle4x4-32.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 24 inversions.
+The board's distance is 7
+The board's zero row is 1
+The board's zero col is 1
+6 2 3 8 
+5 0 7 11 
+1 10 4 12 
+13 14 9 15 
+
+
+puzzles/puzzle4x4-33.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 34 inversions.
+The board's distance is 29
+The board's zero row is 3
+The board's zero col is 0
+6 7 4 11 
+3 2 8 12 
+1 5 13 15 
+0 9 10 14 
+
+
+puzzles/puzzle4x4-33.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 34 inversions.
+The board's distance is 15
+The board's zero row is 3
+The board's zero col is 0
+6 7 4 11 
+3 2 8 12 
+1 5 13 15 
+0 9 10 14 
+
+
+puzzles/puzzle4x4-34.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 42 inversions.
+The board's distance is 28
+The board's zero row is 1
+The board's zero col is 1
+9 5 8 3 
+6 0 10 11 
+2 1 14 7 
+13 15 12 4 
+
+
+puzzles/puzzle4x4-34.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 42 inversions.
+The board's distance is 14
+The board's zero row is 1
+The board's zero col is 1
+9 5 8 3 
+6 0 10 11 
+2 1 14 7 
+13 15 12 4 
+
+
+puzzles/puzzle4x4-35.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 38 inversions.
+The board's distance is 29
+The board's zero row is 1
+The board's zero col is 0
+9 1 5 7 
+0 13 2 4 
+14 6 12 3 
+10 15 8 11 
+
+
+puzzles/puzzle4x4-35.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 38 inversions.
+The board's distance is 15
+The board's zero row is 1
+The board's zero col is 0
+9 1 5 7 
+0 13 2 4 
+14 6 12 3 
+10 15 8 11 
+
+
+puzzles/puzzle4x4-36.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 33 inversions.
+The board's distance is 20
+The board's zero row is 2
+The board's zero col is 0
+3 14 2 4 
+9 1 7 8 
+0 12 6 10 
+13 5 11 15 
+
+
+puzzles/puzzle4x4-36.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 33 inversions.
+The board's distance is 11
+The board's zero row is 2
+The board's zero col is 0
+3 14 2 4 
+9 1 7 8 
+0 12 6 10 
+13 5 11 15 
+
+
+puzzles/puzzle4x4-37.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 32 inversions.
+The board's distance is 27
+The board's zero row is 1
+The board's zero col is 0
+5 9 1 3 
+0 11 2 7 
+10 13 12 4 
+6 15 8 14 
+
+
+puzzles/puzzle4x4-37.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 32 inversions.
+The board's distance is 15
+The board's zero row is 1
+The board's zero col is 0
+5 9 1 3 
+0 11 2 7 
+10 13 12 4 
+6 15 8 14 
+
+
+puzzles/puzzle4x4-38.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 26 inversions.
+The board's distance is 20
+The board's zero row is 3
+The board's zero col is 3
+2 6 4 8 
+1 10 7 3 
+5 13 11 15 
+12 14 9 0 
+
+
+puzzles/puzzle4x4-38.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 26 inversions.
+The board's distance is 12
+The board's zero row is 3
+The board's zero col is 3
+2 6 4 8 
+1 10 7 3 
+5 13 11 15 
+12 14 9 0 
+
+
+puzzles/puzzle4x4-39.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 33 inversions.
+The board's distance is 27
+The board's zero row is 2
+The board's zero col is 3
+3 4 6 8 
+1 2 12 11 
+15 14 7 0 
+5 10 9 13 
+
+
+puzzles/puzzle4x4-39.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 33 inversions.
+The board's distance is 15
+The board's zero row is 2
+The board's zero col is 3
+3 4 6 8 
+1 2 12 11 
+15 14 7 0 
+5 10 9 13 
+
+
+puzzles/puzzle4x4-40.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 30 inversions.
+The board's distance is 28
+The board's zero row is 1
+The board's zero col is 1
+5 6 3 4 
+8 0 1 15 
+10 7 2 11 
+12 9 14 13 
+
+
+puzzles/puzzle4x4-40.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 30 inversions.
+The board's distance is 13
+The board's zero row is 1
+The board's zero col is 1
+5 6 3 4 
+8 0 1 15 
+10 7 2 11 
+12 9 14 13 
+
+
+puzzles/puzzle4x4-41.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 42 inversions.
+The board's distance is 27
+The board's zero row is 3
+The board's zero col is 2
+5 15 3 4 
+2 10 6 12 
+9 8 7 13 
+11 1 0 14 
+
+
+puzzles/puzzle4x4-41.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 42 inversions.
+The board's distance is 12
+The board's zero row is 3
+The board's zero col is 2
+5 15 3 4 
+2 10 6 12 
+9 8 7 13 
+11 1 0 14 
+
+
+puzzles/puzzle4x4-42.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 29 inversions.
+The board's distance is 32
+The board's zero row is 0
+The board's zero col is 0
+0 9 1 10 
+3 5 4 2 
+14 6 11 7 
+12 13 8 15 
+
+
+puzzles/puzzle4x4-42.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 29 inversions.
+The board's distance is 14
+The board's zero row is 0
+The board's zero col is 0
+0 9 1 10 
+3 5 4 2 
+14 6 11 7 
+12 13 8 15 
+
+
+puzzles/puzzle4x4-43.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 47 inversions.
+The board's distance is 29
+The board's zero row is 2
+The board's zero col is 3
+7 11 6 3 
+1 5 2 15 
+12 14 8 0 
+13 10 9 4 
+
+
+puzzles/puzzle4x4-43.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 47 inversions.
+The board's distance is 14
+The board's zero row is 2
+The board's zero col is 3
+7 11 6 3 
+1 5 2 15 
+12 14 8 0 
+13 10 9 4 
+
+
+puzzles/puzzle4x4-44.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 54 inversions.
+The board's distance is 36
+The board's zero row is 1
+The board's zero col is 1
+14 5 11 6 
+9 0 4 3 
+15 1 7 12 
+8 2 13 10 
+
+
+puzzles/puzzle4x4-44.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 54 inversions.
+The board's distance is 14
+The board's zero row is 1
+The board's zero col is 1
+14 5 11 6 
+9 0 4 3 
+15 1 7 12 
+8 2 13 10 
+
+
+puzzles/puzzle4x4-45.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 31 inversions.
+The board's distance is 31
+The board's zero row is 2
+The board's zero col is 1
+6 2 5 3 
+9 7 1 14 
+10 0 13 8 
+11 12 4 15 
+
+
+puzzles/puzzle4x4-45.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 31 inversions.
+The board's distance is 14
+The board's zero row is 2
+The board's zero col is 1
+6 2 5 3 
+9 7 1 14 
+10 0 13 8 
+11 12 4 15 
+
+
+puzzles/puzzle4x4-46.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 57 inversions.
+The board's distance is 32
+The board's zero row is 2
+The board's zero col is 0
+13 11 9 3 
+14 7 1 4 
+0 5 10 12 
+15 2 6 8 
+
+
+puzzles/puzzle4x4-46.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 57 inversions.
+The board's distance is 14
+The board's zero row is 2
+The board's zero col is 0
+13 11 9 3 
+14 7 1 4 
+0 5 10 12 
+15 2 6 8 
+
+
+puzzles/puzzle4x4-47.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 32 inversions.
+The board's distance is 33
+The board's zero row is 3
+The board's zero col is 0
+2 4 1 6 
+12 13 5 3 
+14 7 11 15 
+0 9 8 10 
+
+
+puzzles/puzzle4x4-47.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 32 inversions.
+The board's distance is 14
+The board's zero row is 3
+The board's zero col is 0
+2 4 1 6 
+12 13 5 3 
+14 7 11 15 
+0 9 8 10 
+
+
+puzzles/puzzle4x4-48.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 29 inversions.
+The board's distance is 34
+The board's zero row is 2
+The board's zero col is 0
+7 8 1 10 
+2 4 5 13 
+0 9 3 6 
+11 14 15 12 
+
+
+puzzles/puzzle4x4-48.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 29 inversions.
+The board's distance is 13
+The board's zero row is 2
+The board's zero col is 0
+7 8 1 10 
+2 4 5 13 
+0 9 3 6 
+11 14 15 12 
+
+
+puzzles/puzzle4x4-49.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 62 inversions.
+The board's distance is 33
+The board's zero row is 1
+The board's zero col is 2
+2 10 15 4 
+14 11 0 6 
+9 13 8 3 
+5 7 12 1 
+
+
+puzzles/puzzle4x4-49.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 62 inversions.
+The board's distance is 13
+The board's zero row is 1
+The board's zero col is 2
+2 10 15 4 
+14 11 0 6 
+9 13 8 3 
+5 7 12 1 
+
+
+puzzles/puzzle4x4-50.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 45 inversions.
+The board's distance is 32
+The board's zero row is 0
+The board's zero col is 2
+2 3 0 8 
+15 12 6 7 
+13 1 4 9 
+14 11 10 5 
+
+
+puzzles/puzzle4x4-50.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 45 inversions.
+The board's distance is 15
+The board's zero row is 0
+The board's zero col is 2
+2 3 0 8 
+15 12 6 7 
+13 1 4 9 
+14 11 10 5 
+
+
+puzzles/puzzle4x4-78.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 105 inversions.
+The board's distance is 58
+The board's zero row is 0
+The board's zero col is 0
+0 15 14 13 
+12 11 10 9 
+8 7 6 5 
+4 3 2 1 
+
+
+puzzles/puzzle4x4-78.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 105 inversions.
+The board's distance is 15
+The board's zero row is 0
+The board's zero col is 0
+0 15 14 13 
+12 11 10 9 
+8 7 6 5 
+4 3 2 1 
+
+
+puzzles/puzzle4x4-80.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 83 inversions.
+The board's distance is 58
+The board's zero row is 0
+The board's zero col is 0
+0 12 9 13 
+15 11 10 14 
+3 7 5 6 
+4 8 2 1 
+
+
+puzzles/puzzle4x4-80.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 83 inversions.
+The board's distance is 15
+The board's zero row is 0
+The board's zero col is 0
+0 12 9 13 
+15 11 10 14 
+3 7 5 6 
+4 8 2 1 
+
+
+puzzles/puzzle4x4-unsolvable.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 17 inversions.
+The board's distance is 13
+The board's zero row is 1
+The board's zero col is 2
+3 2 4 8 
+1 6 0 12 
+5 10 7 11 
+9 13 14 15 
+
+
+puzzles/puzzle4x4-unsolvable.txt
+The board is solvable -> false
+The board is goal -> false
+0 moves were made 
+The board has 17 inversions.
+The board's distance is 12
+The board's zero row is 1
+The board's zero col is 2
+3 2 4 8 
+1 6 0 12 
+5 10 7 11 
+9 13 14 15 
+
+
+puzzles/puzzle50.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 39 inversions.
+The board's distance is 38
+The board's zero row is 2
+The board's zero col is 2
+2 9 3 5 
+8 11 12 7 
+15 4 0 13 
+6 1 10 14 
+
+
+puzzles/puzzle50.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 39 inversions.
+The board's distance is 14
+The board's zero row is 2
+The board's zero col is 2
+2 9 3 5 
+8 11 12 7 
+15 4 0 13 
+6 1 10 14 
+
+
+puzzles/test.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 10
+The board's zero row is 1
+The board's zero col is 1
+8 1 3 
+4 0 2 
+7 6 5 
+
+
+puzzles/test.txt
+The board is solvable -> true
+The board is goal -> false
+0 moves were made 
+The board has 12 inversions.
+The board's distance is 5
+The board's zero row is 1
+The board's zero col is 1
+8 1 3 
+4 0 2 
+7 6 5 
+
+
