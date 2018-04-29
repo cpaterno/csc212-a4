@@ -8,10 +8,6 @@ void swap(unsigned int* a, unsigned int* b) {
 	*b = temp;
 }
 
-void copyArray(unsigned int* oB, unsigned int* nB, unsigned int len) {
-	for(unsigned int i = 0; i < len; i++) nB[i] = oB[i];
-}
-
 Board::Board() {
 	dim = 0; 
 	N = 0; 
@@ -64,7 +60,6 @@ bool Board::is_goal() {
 }
         
 void Board::neighbors(std::vector<Board *> *neigh, char type) {
-	unsigned int nB[N + 1];
 	bool direction[4] = {true, true, true, true};
 	/* 3 cases:
 		Corner: 2 neighbors
@@ -107,28 +102,28 @@ void Board::neighbors(std::vector<Board *> *neigh, char type) {
 	} 
 
 	if (direction[0]) {
-		copyArray(gB, nB, N + 1);
 		// swap up
-		swap(&nB[zRow * dim + zCol], &nB[(zRow + 1)* dim + zCol]);
-		neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
+		swap(&gB[zRow * dim + zCol], &gB[(zRow + 1)* dim + zCol]);
+		neigh->push_back(new Board(gB, N + 1, mov + 1, dType));
+		swap(&gB[zRow * dim + zCol], &gB[(zRow + 1)* dim + zCol]);
 	} 
 	if (direction[1]) {
-		copyArray(gB, nB, N + 1);
 		// swap down
-		swap(&nB[zRow * dim + zCol], &nB[(zRow - 1)* dim + zCol]);
-		neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
+		swap(&gB[zRow * dim + zCol], &gB[(zRow - 1)* dim + zCol]);
+		neigh->push_back(new Board(gB, N + 1, mov + 1, dType));
+		swap(&gB[zRow * dim + zCol], &gB[(zRow - 1)* dim + zCol]);
 	} 
 	if (direction[2]) {
-		copyArray(gB, nB, N + 1);
 		// swap left
-		swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol + 1)]);
-		neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
+		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol + 1)]);
+		neigh->push_back(new Board(gB, N + 1, mov + 1, dType));
+		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol + 1)]);
 	} 
 	if (direction[3]) {
-		copyArray(gB, nB, N + 1);
 		// swap right
-		swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol - 1)]);
-		neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
+		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol - 1)]);
+		neigh->push_back(new Board(gB, N + 1, mov + 1, dType));
+		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol - 1)]);
 	}
 }
         
