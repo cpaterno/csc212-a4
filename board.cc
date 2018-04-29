@@ -65,6 +65,7 @@ bool Board::is_goal() {
         
 void Board::neighbors(std::vector<Board *> *neigh, char type) {
 	unsigned int nB[N + 1];
+	bool direction[4] = {true, true, true, true};
 	/* 3 cases:
 		Corner: 2 neighbors
 		Edge: 3 neighbors
@@ -75,125 +76,59 @@ void Board::neighbors(std::vector<Board *> *neigh, char type) {
 		if (zRow != zCol) {
 			if (zRow == 0) {
 				// up and right (top right corner)
-				// swap up
-				swap(&nB[zRow * dim + zCol], &nB[(zRow + 1)* dim + zCol]);
-				neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-				copyArray(gB, nB, N + 1);
-				// swap right
-				swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol - 1)]);
-				neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-				copyArray(gB, nB, N + 1);
+				direction[1] = false;
+				direction[2] = false;
 			} else {
 				// down and left (bottom left corner)
-				copyArray(gB, nB, N + 1);
-				// swap down
-				swap(&nB[zRow * dim + zCol], &nB[(zRow - 1)* dim + zCol]);
-				neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-				copyArray(gB, nB, N + 1);
-				// swap left
-				swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol + 1)]);
-				neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
+				direction[0] = false;
+				direction[3] = false;
 			}
 		} else {
 			if (zRow == 0) {
 				// up and left (top left corner)
-				copyArray(gB, nB, N + 1);
-				// swap up
-				swap(&nB[zRow * dim + zCol], &nB[(zRow + 1)* dim + zCol]);
-				neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-				copyArray(gB, nB, N + 1);
-				// swap left
-				swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol + 1)]);
-				neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
+				direction[1] = false;
+				direction[3] = false;
 			} else {
 				// down and right (bottom right corner)
-				copyArray(gB, nB, N + 1);
-				// swap down
-				swap(&nB[zRow * dim + zCol], &nB[(zRow - 1)* dim + zCol]);
-				neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-				copyArray(gB, nB, N + 1);
-				// swap right
-				swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol - 1)]);
-				neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
+				direction[0] = false;
+				direction[2] = false;
 			}
 		}
 	} else if (zRow == 0 || zCol == 0 || zRow == dim - 1 || zCol == dim - 1) {
 		// edges case
-		if (zRow == 0) {
-			// up, left, right
-			copyArray(gB, nB, N + 1);
-			// swap up
-			swap(&nB[zRow * dim + zCol], &nB[(zRow + 1)* dim + zCol]);
-			neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-			copyArray(gB, nB, N + 1);
-			// swap left
-			swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol + 1)]);
-			neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-			copyArray(gB, nB, N + 1);
-			// swap right
-			swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol - 1)]);
-			neigh->push_back(new Board(nB, N + 1, mov + 1, dType));	
-		} else if (zCol == 0) {
-			// up, down, left
-			copyArray(gB, nB, N + 1);
-			// swap up
-			swap(&nB[zRow * dim + zCol], &nB[(zRow + 1)* dim + zCol]);
-			neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-			copyArray(gB, nB, N + 1);
-			// swap down
-			swap(&nB[zRow * dim + zCol], &nB[(zRow - 1)* dim + zCol]);
-			neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-			copyArray(gB, nB, N + 1);
-			// swap left
-			swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol + 1)]);
-			neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-		} else if (zRow == dim - 1) {
-			// down, left, right
-			copyArray(gB, nB, N + 1);
-			// swap down
-			swap(&nB[zRow * dim + zCol], &nB[(zRow - 1)* dim + zCol]);
-			neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-			copyArray(gB, nB, N + 1);
-			// swap left
-			swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol + 1)]);
-			neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-			copyArray(gB, nB, N + 1);
-			// swap right
-			swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol - 1)]);
-			neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-		} else {
-			// up, down, right
-			copyArray(gB, nB, N + 1);
-			// swap up
-			swap(&nB[zRow * dim + zCol], &nB[(zRow + 1)* dim + zCol]);
-			neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-			copyArray(gB, nB, N + 1);
-			// swap down
-			swap(&nB[zRow * dim + zCol], &nB[(zRow - 1)* dim + zCol]);
-			neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-			copyArray(gB, nB, N + 1);
-			// swap right
-			swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol - 1)]);
-			neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
-		}
-	} else {
-		// else
+		// up, left, right
+		if (zRow == 0) direction[1] = false;
+		// up, down, left	
+		else if (zCol == 0) direction[3] = false;
+		// down, left, right
+		else if (zRow == dim - 1) direction[0] = false;
+		// up, down, right	
+		else direction[2] = false;
+	} 
+
+	if (direction[0]) {
 		copyArray(gB, nB, N + 1);
 		// swap up
 		swap(&nB[zRow * dim + zCol], &nB[(zRow + 1)* dim + zCol]);
 		neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
+	} 
+	if (direction[1]) {
 		copyArray(gB, nB, N + 1);
 		// swap down
 		swap(&nB[zRow * dim + zCol], &nB[(zRow - 1)* dim + zCol]);
 		neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
+	} 
+	if (direction[2]) {
 		copyArray(gB, nB, N + 1);
 		// swap left
 		swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol + 1)]);
 		neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
+	} 
+	if (direction[3]) {
 		copyArray(gB, nB, N + 1);
 		// swap right
 		swap(&nB[zRow * dim + zCol], &nB[zRow * dim + (zCol - 1)]);
-		neigh->push_back(new Board(nB, N + 1, mov + 1, dType)); 
+		neigh->push_back(new Board(nB, N + 1, mov + 1, dType));
 	}
 }
         
