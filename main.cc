@@ -3,6 +3,13 @@
 #include <vector>
 #include <queue>
 
+void nMovesLoop(unsigned int *b, unsigned int n, char type) {
+    for(int i = 0; i < 1000000; i++) {
+        Board root = Board(b, n, i, type);
+        std::cout << root.get_n_moves() << std::endl;
+    }
+}
+
 void testMethods(unsigned int *b, unsigned int n, char type) {
 	Board root = Board(b, n, 0, type);
 	std::vector<Board*> neighbors;
@@ -12,7 +19,7 @@ void testMethods(unsigned int *b, unsigned int n, char type) {
     std::cout << "The board has " << root.inversions() << " inversions." << std::endl;
     std::cout << "The board's distance is " << root.manhattan() << std::endl;
     std::cout << "The board's zero row is " << root.getZRow() << std::endl;
-    std::cout << "The board's zero col is " << root.getZCol() << std::endl; 
+    std::cout << "The board's zero col is " << root.getZCol() << std::endl;
     root.printBoard();
     root.neighbors(&neighbors, type);
     for(unsigned int i = 0; i < neighbors.size(); i++) {
@@ -20,7 +27,7 @@ void testMethods(unsigned int *b, unsigned int n, char type) {
         delete neighbors[i];
     }
     std::cout << std::endl;
-} 
+}
 
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
@@ -30,7 +37,7 @@ void testMethods(unsigned int *b, unsigned int n, char type) {
 // the board is just a sequence of numbers in row-major order (including the zero element)
 // n: number of elements in the board
 // type: distance to be used 'm' for manhattan and 'b' for hamming
-void solve(unsigned int *b, unsigned int n, char type) { 
+void solve(unsigned int *b, unsigned int n, char type) {
     //Board* root = new Board(b, n, 0, type);
     //std::vector<Board*> neighbors;
 }
@@ -59,6 +66,7 @@ int main(int argc, char **argv) {
     // calls the solver passing the values of the board and the search type
     unsigned int *b = &v[0];
     //solve(b, len, type);
-    testMethods(b, len, type);
+    //testMethods(b, len, type);
+    nMovesLoop(b, len, type);
     return 0;
 }
