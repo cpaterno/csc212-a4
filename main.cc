@@ -20,10 +20,10 @@ void testMethods(unsigned int *b, unsigned int n, char type) {
     std::cout << "The board's distance is " << root.manhattan() << std::endl;
     std::cout << "The board's zero row is " << root.getZRow() << std::endl;
     std::cout << "The board's zero col is " << root.getZCol() << std::endl;
-    root.printBoard();
+    root.myPrintBoard();
     root.neighbors(&neighbors, type);
     for(unsigned int i = 0; i < neighbors.size(); i++) {
-        neighbors[i]->printBoard();
+        neighbors[i]->myPrintBoard();
         delete neighbors[i];
     }
     std::cout << std::endl;

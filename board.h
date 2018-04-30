@@ -52,7 +52,8 @@ class Board {
         /* Added Helpers */
         unsigned int getZRow();
         unsigned int getZCol();
-        void printBoard();
+        void myPrintBoard();
+        void print_board();
         std::string boardToString();
 };
 

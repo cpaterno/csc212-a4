@@ -23,16 +23,16 @@ Board::Board() {
 Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
 	unsigned int index = 0;
 	dim = sqrt(n);
-	N = n - 1;
+	N = n;
 	dType = type;
 	mov = m;
 	dist = 0; // initialize dist
 	zRow = 0; // initialize zRow
 	zCol = 0;
 	// setup the board
-	gB = new unsigned int[n];
+	gB = new unsigned int[N];
 	// fill in its values
-	for(unsigned int i = 0; i < n; i++) {
+	for(unsigned int i = 0; i < N; i++) {
 		gB[i] = b[i];
 		if (b[i] == 0) index = i;
 	}
@@ -55,9 +55,7 @@ bool Board::is_solvable() {
 }
 
 bool Board::is_goal() {
-	//if (dist == 0) return true;
-    //return false;
-    return (dist==0);
+    return (dist == 0);
 }
         
 void Board::neighbors(std::vector<Board *> *neigh, char type) {
@@ -105,25 +103,25 @@ void Board::neighbors(std::vector<Board *> *neigh, char type) {
 	if (direction[0]) {
 		// swap up
 		swap(&gB[zRow * dim + zCol], &gB[(zRow + 1)* dim + zCol]);
-		neigh->push_back(new Board(gB, N + 1, mov + 1, dType));
+		neigh->push_back(new Board(gB, N, mov + 1, dType));
 		swap(&gB[zRow * dim + zCol], &gB[(zRow + 1)* dim + zCol]);
 	} 
 	if (direction[1]) {
 		// swap down
 		swap(&gB[zRow * dim + zCol], &gB[(zRow - 1)* dim + zCol]);
-		neigh->push_back(new Board(gB, N + 1, mov + 1, dType));
+		neigh->push_back(new Board(gB, N, mov + 1, dType));
 		swap(&gB[zRow * dim + zCol], &gB[(zRow - 1)* dim + zCol]);
 	} 
 	if (direction[2]) {
 		// swap left
 		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol + 1)]);
-		neigh->push_back(new Board(gB, N + 1, mov + 1, dType));
+		neigh->push_back(new Board(gB, N, mov + 1, dType));
 		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol + 1)]);
 	} 
 	if (direction[3]) {
 		// swap right
 		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol - 1)]);
-		neigh->push_back(new Board(gB, N + 1, mov + 1, dType));
+		neigh->push_back(new Board(gB, N, mov + 1, dType));
 		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol - 1)]);
 	}
 }
@@ -134,7 +132,7 @@ unsigned int Board::get_n_moves() {
 
 unsigned int Board::calcHam() {
 	unsigned int ham = 0;
-	for(unsigned int i = 0; i < (N + 1); i++) {
+	for(unsigned int i = 0; i < N; i++) {
 		if (gB[i] != 0 && gB[i] != i + 1) ham++;
 	}
 	return ham;
@@ -152,7 +150,7 @@ unsigned int Board::calcMan() {
 	int aR = 0;
 	int aC = 0;
 	// taking advantage of index = r * dim + c formula
-	for(unsigned int i = 0; i < (N + 1); i++) {
+	for(unsigned int i = 0; i < N; i++) {
 		// ignore the empty element
 		if (gB[i] == 0) continue;
 		index = gB[i] - 1;
@@ -173,14 +171,13 @@ unsigned int Board::manhattan() {
 
 unsigned int Board::countInvers() {
 	unsigned int count = 0;
-	for(unsigned int i = 0; i < (N + 1); i++) {
-		for(unsigned int j = i + 1; j < (N + 1); j++) {
+	for(unsigned int i = 0; i < N; i++) {
+		for(unsigned int j = i + 1; j < N; j++) {
 			if (gB[i] > gB[j] && gB[i] != 0 && gB[j] != 0) count++;
 		}
 	}
     return count;	
 }
-
 
 unsigned int Board::inversions() {
 	return inver;
@@ -194,8 +191,14 @@ unsigned int Board::getZCol() {
 	return zCol;
 }
 
-void Board::printBoard() {
-	for(unsigned int i = 0; i < (N + 1); i++) {
+void Board::print_board() {
+    for (unsigned int i = 0 ; i < N; i ++) {
+        std::cout << gB[i] << " ";
+    }
+}
+
+void Board::myPrintBoard() {
+	for(unsigned int i = 0; i < N; i++) {
 		std::cout << gB[i] << ' ';
 		if ((i + 1) % dim == 0) std::cout << std::endl;
 	}
@@ -204,7 +207,7 @@ void Board::printBoard() {
 
 std::string Board::boardToString() {
 	std::string output = "";
-	for(unsigned int i = 0; i < (N + 1); i++) {
+	for(unsigned int i = 0; i < N; i++) {
 		output += std::to_string(gB[i]);
 	}
 	return output;
