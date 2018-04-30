@@ -27,6 +27,8 @@ void testMethods(unsigned int *b, unsigned int n, char type) {
         delete neighbors[i];
     }
     std::cout << std::endl;
+    std::cout << root.boardToString() << std::endl;
+    std::cout << std::endl;
 }
 
 // -----------------------------------------------------------------------
@@ -66,7 +68,7 @@ int main(int argc, char **argv) {
     // calls the solver passing the values of the board and the search type
     unsigned int *b = &v[0];
     //solve(b, len, type);
-    //testMethods(b, len, type);
-    nMovesLoop(b, len, type);
+    testMethods(b, len, type);
+    //nMovesLoop(b, len, type);
     return 0;
 }

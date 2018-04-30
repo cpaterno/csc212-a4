@@ -2,6 +2,7 @@
 #define __BOARD_H__
 
 #include <vector>
+#include <string>
 
 class Board {
     private:
@@ -52,6 +53,7 @@ class Board {
         unsigned int getZRow();
         unsigned int getZCol();
         void printBoard();
+        std::string boardToString();
 };
 
 #endif

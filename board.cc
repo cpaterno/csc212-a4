@@ -55,8 +55,9 @@ bool Board::is_solvable() {
 }
 
 bool Board::is_goal() {
-	if (dist == 0) return true;
-    return false;
+	//if (dist == 0) return true;
+    //return false;
+    return (dist==0);
 }
         
 void Board::neighbors(std::vector<Board *> *neigh, char type) {
@@ -199,4 +200,12 @@ void Board::printBoard() {
 		if ((i + 1) % dim == 0) std::cout << std::endl;
 	}
 	std::cout << std::endl;
+}
+
+std::string Board::boardToString() {
+	std::string output = "";
+	for(unsigned int i = 0; i < (N + 1); i++) {
+		output += std::to_string(gB[i]);
+	}
+	return output;
 }
