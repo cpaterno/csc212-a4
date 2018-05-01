@@ -63,6 +63,7 @@ bool Board::is_goal() {
 }
         
 void Board::neighbors(std::vector<Board *> *neigh, char type) {
+	if (!gB) return;
 	bool direction[4] = {true, true, true, true};
 	/* 3 cases:
 		Corner: 2 neighbors
@@ -136,6 +137,7 @@ unsigned int Board::get_n_moves() {
 
 unsigned int Board::calcHam() {
 	unsigned int ham = 0;
+	if (!gB) return ham;
 	for(unsigned int i = 0; i < N; i++) {
 		if (gB[i] != 0 && gB[i] != i + 1) ham++;
 	}
@@ -148,6 +150,7 @@ unsigned int Board::hamming() {
 
 unsigned int Board::calcMan() {
 	unsigned int man = 0;
+	if (!gB) return man;
 	int index = 0;
 	int sR = 0;
 	int sC = 0;
@@ -175,6 +178,7 @@ unsigned int Board::manhattan() {
 
 unsigned int Board::countInvers() {
 	unsigned int count = 0;
+	if (!gB) return count;
 	for(unsigned int i = 0; i < N; i++) {
 		for(unsigned int j = i + 1; j < N; j++) {
 			if (gB[i] > gB[j] && gB[i] != 0 && gB[j] != 0) count++;
@@ -196,12 +200,14 @@ unsigned int Board::getZCol() {
 }
 
 void Board::print_board() {
+	if (!gB) return;
     for (unsigned int i = 0 ; i < N; i ++) {
         std::cout << gB[i] << " ";
     }
 }
 
 void Board::myPrintBoard() {
+	if (!gB) return;
 	for(unsigned int i = 0; i < N; i++) {
 		std::cout << gB[i] << ' ';
 		if ((i + 1) % dim == 0) std::cout << std::endl;
@@ -211,6 +217,7 @@ void Board::myPrintBoard() {
 
 std::string Board::boardToString() {
 	std::string output = "";
+	if (!gB) return output;
 	for(unsigned int i = 0; i < N; i++) {
 		output += std::to_string(gB[i]);
 	}
