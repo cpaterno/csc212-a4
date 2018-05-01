@@ -57,4 +57,28 @@ class Board {
         std::string boardToString();
 };
 
+class SearchNode {
+    private:
+        Board *bP;
+        unsigned int priority;
+        unsigned int hash;
+        unsigned int calcPriority();
+        unsigned int calcHash(std::string *s);
+    public:
+        SearchNode();
+        SearchNode(Board *b, std::string *s); 
+        ~SearchNode();
+        Board* getBoard();
+        unsigned int getPriority();
+        unsigned int getHash();
+        friend class Comparator;
+};
+
+class Comparator {
+    public:
+       bool operator() (SearchNode *n1, SearchNode *n2) {
+            return (n1->priority > n2->priority);
+       } 
+};
+
 #endif

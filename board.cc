@@ -223,3 +223,49 @@ std::string Board::boardToString() {
 	}
 	return output;
 }
+
+//-------------------------------------------------------------------------
+
+SearchNode::SearchNode() {
+	bP = nullptr;
+	priority = 0;
+	hash = 0;
+}
+
+SearchNode::SearchNode(Board *b, std::string *s) {
+	bP = b;
+	priority = calcPriority();
+	hash = calcHash(s);
+}
+
+SearchNode::~SearchNode() {
+	if (bP) delete bP;
+} 
+
+unsigned int SearchNode::calcPriority() {
+	// doesn't matter which distance function is used
+	// as in my implementation they
+	// both return the distance datamember
+	return bP->get_n_moves() + bP->manhattan();
+}
+
+// How Java hashes strings
+unsigned int SearchNode::calcHash(std::string *s) {
+	unsigned int result = 0;
+	for(unsigned int i = 0; i < s->length(); i++) {
+		result = (*s)[i] + (31 * result); 
+	}
+	return result;
+}
+
+Board* SearchNode::getBoard() {
+	return bP;
+}
+
+unsigned int SearchNode::getPriority() {
+	return priority;
+}
+
+unsigned int SearchNode::getHash() {
+	return hash;
+}

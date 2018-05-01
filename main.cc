@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <unordered_set>
 
 void nMovesLoop(unsigned int *b, unsigned int n, char type) {
     for(int i = 0; i < 1000000; i++) {
@@ -40,8 +41,14 @@ void testMethods(unsigned int *b, unsigned int n, char type) {
 // n: number of elements in the board
 // type: distance to be used 'm' for manhattan and 'b' for hamming
 void solve(unsigned int *b, unsigned int n, char type) {
-    //Board* root = new Board(b, n, 0, type);
-    //std::vector<Board*> neighbors;
+    std::vector<Board*> neighbors;
+    Board* root = new Board(b, n, 0, type);
+    std::string rootStr = root->boardToString();
+    SearchNode s = SearchNode(root, &rootStr);
+    std::priority_queue<SearchNode*, std::vector<SearchNode*>, Comparator> PQ;
+    std::unordered_set<unsigned int> inPQ;
+    PQ.push(&s);
+    inPQ.insert(s.getHash());
 }
 
 // -----------------------------------------------------------------------
