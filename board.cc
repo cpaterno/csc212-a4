@@ -29,23 +29,27 @@ Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
 	dist = 0; // initialize dist
 	zRow = 0; // initialize zRow
 	zCol = 0;
-	// setup the board
-	gB = new unsigned int[N];
-	// fill in its values
-	for(unsigned int i = 0; i < N; i++) {
-		gB[i] = b[i];
-		if (b[i] == 0) index = i;
+	inver = 0;
+	if (!n) gB = nullptr;
+	else {
+		// setup the board
+		gB = new unsigned int[N];
+		// fill in its values
+		for(unsigned int i = 0; i < N; i++) {
+			gB[i] = b[i];
+			if (b[i] == 0) index = i;
+		}
+		zRow = index / dim;
+		zCol = abs(index - ((int)zRow * dim));
+		// update dist
+		if (dType == 'm') dist = calcMan();
+		else if (dType == 'h') dist = calcHam();
+		inver = countInvers();
 	}
-	zRow = index / dim;
-	zCol = abs(index - ((int)zRow * dim));
-	// update dist
-	if (dType == 'm') dist = calcMan();
-	else if (dType == 'b' || dType == 'h') dist = calcHam();
-	inver = countInvers();
 }
 
 Board::~Board() {
-	delete[] gB;
+	if (gB) delete[] gB;
 }
 
 bool Board::is_solvable() {

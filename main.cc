@@ -67,8 +67,8 @@ int main(int argc, char **argv) {
     }
     // calls the solver passing the values of the board and the search type
     unsigned int *b = &v[0];
-    //solve(b, len, type);
-    testMethods(b, len, type);
+    solve(b, len, type);
+    //testMethods(b, len, type);
     //nMovesLoop(b, len, type);
     return 0;
 }
