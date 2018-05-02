@@ -4,16 +4,7 @@
 #include <queue>
 #include <unordered_set>
 
-// How Java hashes strings
-/*unsigned int calcHash(std::string *s) {
-    unsigned int result = 0;
-    for(unsigned int i = 0; i < s->length(); i++) {
-        result = (*s)[i] + (31 * result);
-    }
-    return result;
-}*/
-
-void testMethods(unsigned int *b, unsigned int n, char type) {
+/*void testMethods(unsigned int *b, unsigned int n, char type) {
 	Board root = Board(b, n, 0, type);
 	std::vector<Board*> neighbors;
     std::cout << std::boolalpha << "The board is solvable -> " << root.is_solvable() << std::endl;
@@ -32,7 +23,7 @@ void testMethods(unsigned int *b, unsigned int n, char type) {
     std::cout << std::endl;
     std::cout << root.boardToString() << std::endl;
     std::cout << std::endl;
-}
+}*/
 
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
@@ -51,15 +42,14 @@ void solve(unsigned int *b, unsigned int n, char type) {
     visited.insert(boardStr);
     Board* goalBoard = nullptr;
     while(!boardQ.empty()) {
-        std::cout << boardQ.size() << std::endl;
         goalBoard = boardQ.top();
         boardQ.pop();
         if (goalBoard->is_goal()) {
-            std::cout <<"Number of moves: " << goalBoard->get_n_moves() << std::endl;
+            std::cout <<"Number of moves: " << goalBoard->get_n_moves();
             break;
         }
         if(!goalBoard->is_solvable()) {
-            std::cout << "Unsolvable board" << std::endl;
+            std::cout << "Unsolvable board";
             break;
         }
         std::vector<Board*> neigh;
@@ -69,7 +59,7 @@ void solve(unsigned int *b, unsigned int n, char type) {
             if (visited.find(boardStr) == visited.end()) {
                 boardQ.push(i);
                 visited.insert(boardStr);
-            }
+            } else delete i;
         }
     }
 }
@@ -98,7 +88,5 @@ int main(int argc, char **argv) {
     // calls the solver passing the values of the board and the search type
     unsigned int *b = &v[0];
     solve(b, len, type);
-    //testMethods(b, len, type);
-    //nMovesLoop(b, len, type);
     return 0;
 }
