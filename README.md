@@ -16,8 +16,7 @@ Using A* Search to Solve the N-Puzzle Problem
 
 # Main Checklist 
 - [ ] `solve` method (A* search)
-- [x] Write search node class
-- [x] Write search node comparator class
+- [x] Write board comparator class
 - [ ] Use priority queue and unordered set (hash table)
 - [x] File IO
 - [ ] Comments and Optimizations

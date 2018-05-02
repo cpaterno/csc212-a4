@@ -43,8 +43,43 @@ void testMethods(unsigned int *b, unsigned int n, char type) {
 // n: number of elements in the board
 // type: distance to be used 'm' for manhattan and 'b' for hamming
 void solve(unsigned int *b, unsigned int n, char type) {
-    std::vector<Board*> neighbors;
+    std::vector<Board*> neigh;
     Board* root = new Board(b, n, 0, type);
+    std::string boardStr = root->boardToString();
+    unsigned int hash = calcHash(&boardStr);
+    std::priority_queue<Board*, std::vector<Board*>, Comparator> boardQ;
+    std::unordered_set<unsigned int> visited;
+    boardQ.push(root);
+    visited.insert(hash);
+    Board* goalBoard = nullptr;
+    while(1) {
+        // 3 Base cases
+        if (boardQ.empty()) {
+            std::cout << "Unsolvable Board" << std::endl;
+            break;
+        }
+        goalBoard = boardQ.top();
+        if (goalBoard->is_goal()) {
+            std::cout <<"Number of moves " << goalBoard->get_n_moves() << std::endl;
+            boardQ.pop();
+            break;
+        }
+        if(goalBoard->is_solvable() == false) {
+            std::cout << "Unsolvable Board" << std::endl;
+            boardQ.pop();
+            break;
+        }
+        boardQ.pop();
+        goalBoard->neighbors(&neigh, type);
+        for(unsigned int i = 0; i < neigh.size(); i++) {
+            boardStr = neigh[i]->boardToString();
+            hash = calcHash(&boardStr);
+            if (visited.find(hash) == visited.end()) {
+                boardQ.push(neigh[i]);
+                visited.insert(hash);
+            }
+        }
+    }
 }
 
 // -----------------------------------------------------------------------
