@@ -5,13 +5,13 @@
 #include <unordered_set>
 
 // How Java hashes strings
-unsigned int calcHash(std::string *s) {
+/*unsigned int calcHash(std::string *s) {
     unsigned int result = 0;
     for(unsigned int i = 0; i < s->length(); i++) {
         result = (*s)[i] + (31 * result);
     }
     return result;
-}
+}*/
 
 void testMethods(unsigned int *b, unsigned int n, char type) {
 	Board root = Board(b, n, 0, type);
@@ -43,38 +43,34 @@ void testMethods(unsigned int *b, unsigned int n, char type) {
 // n: number of elements in the board
 // type: distance to be used 'm' for manhattan and 'b' for hamming
 void solve(unsigned int *b, unsigned int n, char type) {
-    std::vector<Board*> neigh;
     Board root = Board(b, n, 0, type);
     std::string boardStr = root.boardToString();
-    unsigned int hash = calcHash(&boardStr);
     std::priority_queue<Board*, std::vector<Board*>, Comparator> boardQ;
-    std::unordered_set<unsigned int> visited;
+    std::unordered_set<std::string> visited;
     boardQ.push(&root);
-    visited.insert(hash);
+    visited.insert(boardStr);
     Board* goalBoard = nullptr;
     while(!boardQ.empty()) {
+        std::cout << boardQ.size() << std::endl;
         goalBoard = boardQ.top();
+        boardQ.pop();
         if (goalBoard->is_goal()) {
             std::cout <<"Number of moves: " << goalBoard->get_n_moves() << std::endl;
-            boardQ.pop();
             break;
         }
         if(!goalBoard->is_solvable()) {
             std::cout << "Unsolvable board" << std::endl;
-            boardQ.pop();
             break;
         }
+        std::vector<Board*> neigh;
         goalBoard->neighbors(&neigh, type);
-        boardQ.pop();
         for(Board* i : neigh) {
             boardStr = i->boardToString();
-            hash = calcHash(&boardStr);
-            if (visited.find(hash) == visited.end()) {
+            if (visited.find(boardStr) == visited.end()) {
                 boardQ.push(i);
-                visited.insert(hash);
+                visited.insert(boardStr);
             }
         }
-        neigh.clear();
     }
 }
 
