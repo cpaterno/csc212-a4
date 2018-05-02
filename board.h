@@ -22,7 +22,6 @@ class Board {
         unsigned int calcHam();
         unsigned int calcMan();
         unsigned int countInvers();
-        friend class Comparator;
 
     public:
         // default constructor (for creating an empty board)

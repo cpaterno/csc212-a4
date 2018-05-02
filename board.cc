@@ -233,5 +233,5 @@ unsigned int Board::getPriority() {
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 bool Comparator::operator() (Board *b1, Board *b2) {
-	return (b1->priority > b2->priority);
+	return (b1->getPriority() > b2->getPriority());
 }
