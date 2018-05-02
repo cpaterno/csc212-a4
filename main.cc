@@ -45,10 +45,42 @@ void solve(unsigned int *b, unsigned int n, char type) {
     Board* root = new Board(b, n, 0, type);
     std::string rootStr = root->boardToString();
     SearchNode s = SearchNode(root, &rootStr);
-    std::priority_queue<SearchNode*, std::vector<SearchNode*>, Comparator> PQ;
-    std::unordered_set<unsigned int> inPQ;
-    PQ.push(&s);
-    inPQ.insert(s.getHash());
+    std::priority_queue<SearchNode*, std::vector<SearchNode*>, Comparator> boardQ;
+    std::unordered_set<unsigned int> visited;
+    boardQ.push(&s);
+    visited.insert(s.getHash());
+    SearchNode* goalNode = nullptr;
+    std::unordered_set<unsigned int>::const_iterator it;
+    while(1) {
+        if (boardQ.empty()) {
+            std::cout << "Unsolvable board" << std::endl;
+            break;
+        }
+        goalNode = boardQ.top();
+        // 2 base cases
+        if (goalNode->getBoard()->is_goal()) {
+            std::cout << "Number of moves : " << goalNode->getBoard()->get_n_moves() << std::endl;
+            boardQ.pop();
+            break;
+        }
+        if (goalNode->getBoard()->is_solvable() == false) {
+            std::cout << "Unsolvable board" << std::endl;
+            boardQ.pop();
+            break;
+        }
+        goalNode->getBoard()->neighbors(&neighbors, type);
+        boardQ.pop();
+        for(unsigned int i = 0; i < neighbors.size(); i++) {
+            rootStr = neighbors[i]->boardToString();
+            s = SearchNode(neighbors[i], &rootStr);
+            it = visited.find(s.getHash());
+            if (it == visited.end()) {
+                boardQ.push(&s);
+                visited.insert(s.getHash());
+            }
+        }
+        neighbors.clear();
+    }
 }
 
 // -----------------------------------------------------------------------
