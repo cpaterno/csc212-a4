@@ -60,7 +60,7 @@ void solve(unsigned int *b, unsigned int n, char type) {
         }
         goalBoard = boardQ.top();
         if (goalBoard->is_goal()) {
-            std::cout <<"Number of moves " << goalBoard->get_n_moves() << std::endl;
+            std::cout <<"Number of moves: " << goalBoard->get_n_moves() << std::endl;
             boardQ.pop();
             break;
         }
@@ -79,6 +79,7 @@ void solve(unsigned int *b, unsigned int n, char type) {
                 visited.insert(hash);
             }
         }
+        neigh.clear();
     }
 }
 
