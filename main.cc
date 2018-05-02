@@ -64,8 +64,8 @@ void solve(unsigned int *b, unsigned int n, char type) {
             boardQ.pop();
             break;
         }
-        boardQ.pop();
         goalBoard->neighbors(&neigh, type);
+        boardQ.pop();
         for(Board* i : neigh) {
             boardStr = i->boardToString();
             hash = calcHash(&boardStr);
