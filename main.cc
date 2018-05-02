@@ -50,13 +50,13 @@ void solve(unsigned int *b, unsigned int n, char type) {
     boardQ.push(&s);
     visited.insert(s.getHash());
     SearchNode* goalNode = nullptr;
-    std::unordered_set<unsigned int>::const_iterator it;
     while(1) {
         if (boardQ.empty()) {
             std::cout << "Unsolvable board" << std::endl;
             break;
         }
         goalNode = boardQ.top();
+        std::cout << goalNode->getBoard()->boardToString() << ' ' << goalNode->getHash() << std::endl;
         // 2 base cases
         if (goalNode->getBoard()->is_goal()) {
             std::cout << "Number of moves : " << goalNode->getBoard()->get_n_moves() << std::endl;
@@ -73,8 +73,7 @@ void solve(unsigned int *b, unsigned int n, char type) {
         for(unsigned int i = 0; i < neighbors.size(); i++) {
             rootStr = neighbors[i]->boardToString();
             s = SearchNode(neighbors[i], &rootStr);
-            it = visited.find(s.getHash());
-            if (it == visited.end()) {
+            if (visited.find(s.getHash()) == visited.end()) {
                 boardQ.push(&s);
                 visited.insert(s.getHash());
             }

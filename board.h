@@ -17,7 +17,7 @@ class Board {
         unsigned int zRow;
         unsigned int zCol;
         unsigned int inver;
-        // helpers 
+        // helpers
         unsigned int calcHam();
         unsigned int calcMan();
         unsigned int countInvers();
@@ -66,7 +66,7 @@ class SearchNode {
         unsigned int calcHash(std::string *s);
     public:
         SearchNode();
-        SearchNode(Board *b, std::string *s); 
+        SearchNode(Board *b, std::string *s);
         ~SearchNode();
         Board* getBoard();
         unsigned int getPriority();
@@ -76,9 +76,7 @@ class SearchNode {
 
 class Comparator {
     public:
-       bool operator() (SearchNode *n1, SearchNode *n2) {
-            return (n1->priority > n2->priority);
-       } 
+       bool operator() (SearchNode *n1, SearchNode *n2);
 };
 
 #endif

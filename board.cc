@@ -9,16 +9,16 @@ void swap(unsigned int* a, unsigned int* b) {
 }
 
 Board::Board() {
-	dim = 0; 
-	N = 0; 
-	gB = nullptr; 
-	dType = 0; 
-	dist = 0; 
-	mov = 0; 
+	dim = 0;
+	N = 0;
+	gB = nullptr;
+	dType = 0;
+	dist = 0;
+	mov = 0;
 	zRow = 0;
-	zCol = 0; 
+	zCol = 0;
 	inver = 0;
-}       
+}
 
 Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
 	unsigned int index = 0;
@@ -61,7 +61,7 @@ bool Board::is_solvable() {
 bool Board::is_goal() {
     return (dist == 0);
 }
-        
+
 void Board::neighbors(std::vector<Board *> *neigh, char type) {
 	if (!gB) return;
 	bool direction[4] = {true, true, true, true};
@@ -97,32 +97,32 @@ void Board::neighbors(std::vector<Board *> *neigh, char type) {
 		// edges case
 		// up, left, right
 		if (zRow == 0) direction[1] = false;
-		// up, down, left	
+		// up, down, left
 		else if (zCol == 0) direction[3] = false;
 		// down, left, right
 		else if (zRow == dim - 1) direction[0] = false;
-		// up, down, right	
+		// up, down, right
 		else direction[2] = false;
-	} 
+	}
 
 	if (direction[0]) {
 		// swap up
 		swap(&gB[zRow * dim + zCol], &gB[(zRow + 1)* dim + zCol]);
 		neigh->push_back(new Board(gB, N, mov + 1, dType));
 		swap(&gB[zRow * dim + zCol], &gB[(zRow + 1)* dim + zCol]);
-	} 
+	}
 	if (direction[1]) {
 		// swap down
 		swap(&gB[zRow * dim + zCol], &gB[(zRow - 1)* dim + zCol]);
 		neigh->push_back(new Board(gB, N, mov + 1, dType));
 		swap(&gB[zRow * dim + zCol], &gB[(zRow - 1)* dim + zCol]);
-	} 
+	}
 	if (direction[2]) {
 		// swap left
 		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol + 1)]);
 		neigh->push_back(new Board(gB, N, mov + 1, dType));
 		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol + 1)]);
-	} 
+	}
 	if (direction[3]) {
 		// swap right
 		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol - 1)]);
@@ -130,10 +130,10 @@ void Board::neighbors(std::vector<Board *> *neigh, char type) {
 		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol - 1)]);
 	}
 }
-        
+
 unsigned int Board::get_n_moves() {
     return mov;
-}        
+}
 
 unsigned int Board::calcHam() {
 	unsigned int ham = 0;
@@ -162,7 +162,7 @@ unsigned int Board::calcMan() {
 		if (gB[i] == 0) continue;
 		index = gB[i] - 1;
 		// if the element is in the right space, no need to do any calculations
-		if ((int)i == index) continue; 
+		if ((int)i == index) continue;
 		sR = index / dim;
 		sC = abs(index - (sR * dim));
 		aR = i / dim;
@@ -184,7 +184,7 @@ unsigned int Board::countInvers() {
 			if (gB[i] > gB[j] && gB[i] != 0 && gB[j] != 0) count++;
 		}
 	}
-    return count;	
+    return count;
 }
 
 unsigned int Board::inversions() {
@@ -239,8 +239,8 @@ SearchNode::SearchNode(Board *b, std::string *s) {
 }
 
 SearchNode::~SearchNode() {
-	if (bP) delete bP;
-} 
+	//if (bP) delete bP;
+}
 
 unsigned int SearchNode::calcPriority() {
 	// doesn't matter which distance function is used
@@ -253,7 +253,7 @@ unsigned int SearchNode::calcPriority() {
 unsigned int SearchNode::calcHash(std::string *s) {
 	unsigned int result = 0;
 	for(unsigned int i = 0; i < s->length(); i++) {
-		result = (*s)[i] + (31 * result); 
+		result = (*s)[i] + (31 * result);
 	}
 	return result;
 }
@@ -268,4 +268,9 @@ unsigned int SearchNode::getPriority() {
 
 unsigned int SearchNode::getHash() {
 	return hash;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------
+bool Comparator::operator() (SearchNode *n1, SearchNode *n2) {
+	return (n1->priority > n2->priority);
 }
