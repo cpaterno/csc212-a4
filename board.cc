@@ -18,6 +18,7 @@ Board::Board() {
 	zRow = 0;
 	zCol = 0;
 	inver = 0;
+	priority = 0;
 }
 
 Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
@@ -30,6 +31,7 @@ Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
 	zRow = 0; // initialize zRow
 	zCol = 0;
 	inver = 0;
+	priority = 0;
 	if (!n) gB = nullptr;
 	else {
 		// setup the board
@@ -45,6 +47,7 @@ Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
 		if (dType == 'm') dist = calcMan();
 		else if (dType == 'h') dist = calcHam();
 		inver = countInvers();
+		priority = dist + mov;
 	}
 }
 
@@ -224,53 +227,11 @@ std::string Board::boardToString() {
 	return output;
 }
 
-//-------------------------------------------------------------------------
-
-SearchNode::SearchNode() {
-	bP = nullptr;
-	priority = 0;
-	hash = 0;
-}
-
-SearchNode::SearchNode(Board *b, std::string *s) {
-	bP = b;
-	priority = calcPriority();
-	hash = calcHash(s);
-}
-
-SearchNode::~SearchNode() {
-	//if (bP) delete bP;
-}
-
-unsigned int SearchNode::calcPriority() {
-	// doesn't matter which distance function is used
-	// as in my implementation they
-	// both return the distance datamember
-	return bP->get_n_moves() + bP->manhattan();
-}
-
-// How Java hashes strings
-unsigned int SearchNode::calcHash(std::string *s) {
-	unsigned int result = 0;
-	for(unsigned int i = 0; i < s->length(); i++) {
-		result = (*s)[i] + (31 * result);
-	}
-	return result;
-}
-
-Board* SearchNode::getBoard() {
-	return bP;
-}
-
-unsigned int SearchNode::getPriority() {
+unsigned int Board::getPriority() {
 	return priority;
 }
 
-unsigned int SearchNode::getHash() {
-	return hash;
-}
-
 // ---------------------------------------------------------------------------------------------------------------------------------
-bool Comparator::operator() (SearchNode *n1, SearchNode *n2) {
-	return (n1->priority > n2->priority);
+bool Comparator::operator() (Board *b1, Board *b2) {
+	return (b1->priority > b2->priority);
 }

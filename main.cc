@@ -4,11 +4,13 @@
 #include <queue>
 #include <unordered_set>
 
-void nMovesLoop(unsigned int *b, unsigned int n, char type) {
-    for(int i = 0; i < 1000000; i++) {
-        Board root = Board(b, n, i, type);
-        std::cout << root.get_n_moves() << std::endl;
+// How Java hashes strings
+unsigned int calcHash(std::string *s) {
+    unsigned int result = 0;
+    for(unsigned int i = 0; i < s->length(); i++) {
+        result = (*s)[i] + (31 * result);
     }
+    return result;
 }
 
 void testMethods(unsigned int *b, unsigned int n, char type) {
@@ -43,43 +45,6 @@ void testMethods(unsigned int *b, unsigned int n, char type) {
 void solve(unsigned int *b, unsigned int n, char type) {
     std::vector<Board*> neighbors;
     Board* root = new Board(b, n, 0, type);
-    std::string rootStr = root->boardToString();
-    SearchNode s = SearchNode(root, &rootStr);
-    std::priority_queue<SearchNode*, std::vector<SearchNode*>, Comparator> boardQ;
-    std::unordered_set<unsigned int> visited;
-    boardQ.push(&s);
-    visited.insert(s.getHash());
-    SearchNode* goalNode = nullptr;
-    while(1) {
-        if (boardQ.empty()) {
-            std::cout << "Unsolvable board" << std::endl;
-            break;
-        }
-        goalNode = boardQ.top();
-        std::cout << goalNode->getBoard()->boardToString() << ' ' << goalNode->getHash() << std::endl;
-        // 2 base cases
-        if (goalNode->getBoard()->is_goal()) {
-            std::cout << "Number of moves : " << goalNode->getBoard()->get_n_moves() << std::endl;
-            boardQ.pop();
-            break;
-        }
-        if (goalNode->getBoard()->is_solvable() == false) {
-            std::cout << "Unsolvable board" << std::endl;
-            boardQ.pop();
-            break;
-        }
-        goalNode->getBoard()->neighbors(&neighbors, type);
-        boardQ.pop();
-        for(unsigned int i = 0; i < neighbors.size(); i++) {
-            rootStr = neighbors[i]->boardToString();
-            s = SearchNode(neighbors[i], &rootStr);
-            if (visited.find(s.getHash()) == visited.end()) {
-                boardQ.push(&s);
-                visited.insert(s.getHash());
-            }
-        }
-        neighbors.clear();
-    }
 }
 
 // -----------------------------------------------------------------------

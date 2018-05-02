@@ -17,10 +17,12 @@ class Board {
         unsigned int zRow;
         unsigned int zCol;
         unsigned int inver;
+        unsigned int priority;
         // helpers
         unsigned int calcHam();
         unsigned int calcMan();
         unsigned int countInvers();
+        friend class Comparator;
 
     public:
         // default constructor (for creating an empty board)
@@ -55,28 +57,12 @@ class Board {
         void myPrintBoard();
         void print_board();
         std::string boardToString();
-};
-
-class SearchNode {
-    private:
-        Board *bP;
-        unsigned int priority;
-        unsigned int hash;
-        unsigned int calcPriority();
-        unsigned int calcHash(std::string *s);
-    public:
-        SearchNode();
-        SearchNode(Board *b, std::string *s);
-        ~SearchNode();
-        Board* getBoard();
         unsigned int getPriority();
-        unsigned int getHash();
-        friend class Comparator;
 };
 
 class Comparator {
     public:
-       bool operator() (SearchNode *n1, SearchNode *n2);
+       bool operator() (Board *n1, Board *n2);
 };
 
 #endif
