@@ -12,6 +12,9 @@ Board::Board() {
     dist = 0;
     mov = 0;
     priority = 0;
+    inver = 0;
+    zRow = 0;
+    zCol = 0;
 }
 
 Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
@@ -22,30 +25,77 @@ Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
 	// initial values which will be redefined
 	dist = 0; 
 	priority = 0;
+	inver = 0;
+	zRow = 0;
+	zCol = 0;
 	board = nullptr;
 	if (!n) return;
 	board = new unsigned int[N];
-	for(unsigned int i = 0; i < N; i++) board[i] = b[i];
-	if (dType == 'm') dist = manhattan();
-	else if (dType == 'h') dist = hamming();
+	for(unsigned int i = 0; i < N; i++) {
+		board[i] = b[i];
+		if (board[i] == 0) {
+			zRow = i / dim;
+			zCol = abs(i - (zRow * dim));
+		}
+	}
+	if (dType == 'm') dist = calcManhattan();
+	else if (dType == 'h') dist = calcHamming();
 	priority = dist + mov;
+	inver = calcInversions();
 }
 
 Board::~Board() {
 	if (board) {
 		delete[] board;
 		board = nullptr;
-	} 
+	}
+}
+
+/* Private Helpers */
+unsigned int Board::calcManhattan() {
+	unsigned int man = 0;
+	if (!board) return man;
+	int solvIndex = 0;
+	int solvRow = 0;
+	int solvCol = 0;
+	int actRow = 0;
+	int actCol = 0;
+	for(unsigned int i = 0; i < N; i++) {
+		if (board[i] == 0) continue; // ignore zero element
+		solvIndex = board[i] - 1;
+		solvRow = solvIndex / dim;
+		solvCol = abs(solvIndex - (solvRow * dim));
+		actRow = i / dim;
+		actCol = abs(i - (actRow * dim));
+		man += abs(solvRow - actRow) + abs(solvCol - actCol);  
+	}
+	return man;
+}
+
+unsigned int Board::calcHamming() {
+	unsigned int ham = 0;
+	if (!board) return ham;
+	for(unsigned int i = 0; i < N; i++) {
+		if (board[i] != 0 && board[i] != i + 1) ham++;
+	}
+	return ham;
+}
+
+unsigned int Board::calcInversions() {
+	unsigned int inv = 0;
+	if (!board) return inv;
+	for(unsigned int i = 0; i < N; i++) {
+		for(unsigned int j = i + 1; j < N; j++) {
+			if (board[i] != 0 && board[j] != 0 && board[i] > board[j]) inv++;
+		}
+	}
+	return inv;
 }
 
 /* Public Methods */
 bool Board::is_solvable() {
-	if (dim % 2 != 0 && inversions() % 2 == 0) return true;
-	int zRow = 0;
-	for(unsigned int i = 0; i < N; i++) {
-		if (board[i] == 0) zRow = i / dim;
-	}
-	if (dim % 2 == 0 && (inversions() + zRow) % 2 != 0) return true;
+	if (dim % 2 != 0 && inver % 2 == 0) return true;
+	else if (dim % 2 == 0 && (inver + zRow) % 2 != 0) return true;
 	return false;
 }
 
@@ -55,16 +105,8 @@ bool Board::is_goal() {
 
 void Board::neighbors(std::vector<Board *> *neigh, char type) {
 	if (!board) return;
-	int zRow = 0;
-	int zCol = 0;
 	unsigned int copy[N];
-	for(unsigned i = 0; i < N; i++) {
-		copy[i] = board[i];
-		if (copy[i] == 0) {
-			zRow = i / dim;
-			zCol = abs(i - (zRow * dim));
-		}
-	}
+	for(unsigned i = 0; i < N; i++) copy[i] = board[i];
 	// index: 0 is up, 1 is down, 2 is left, 3 is right
 	bool direction[4] = {true, true, true, true}; 
 	// first 4 if statements deal with corners, next 4 are edges
@@ -141,45 +183,15 @@ unsigned int Board::get_n_moves() {
 }
 
 unsigned int Board::hamming() {
-	if (!board) return dist;
-	unsigned int ham = 0;
-	for(unsigned int i = 0; i < N; i++) {
-		if (board[i] != 0 && board[i] != i + 1) ham++;
-	}
-	dist = ham;
-	return ham;
+	return dist;
 }
 
 unsigned int Board::manhattan() {
-	if (!board) return dist;
-	unsigned int man = 0;
-	int solvIndex = 0;
-	int solvRow = 0;
-	int solvCol = 0;
-	int actRow = 0;
-	int actCol = 0;
-	for(unsigned int i = 0; i < N; i++) {
-		if (board[i] == 0) continue; // ignore zero element
-		solvIndex = board[i] - 1;
-		solvRow = solvIndex / dim;
-		solvCol = abs(solvIndex - (solvRow * dim));
-		actRow = i / dim;
-		actCol = abs(i - (actRow * dim));
-		man += abs(solvRow - actRow) + abs(solvCol - actCol);  
-	}
-	dist = man;
 	return dist;
 }
 
 unsigned int Board::inversions() {
-	if (!board) return 0;
-	unsigned int inv = 0;
-	for(unsigned int i = 0; i < N; i++) {
-		for(unsigned int j = i + 1; j < N; j++) {
-			if (board[i] != 0 && board[j] != 0 && board[i] > board[j]) inv++;
-		}
-	}
-	return inv;
+	return inver;
 }
 
 void Board::print_board() {
