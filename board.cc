@@ -1,235 +1,229 @@
 #include "board.h"
+
 #include <iostream>
 #include <cmath>
 
-void swap(unsigned int* a, unsigned int* b) {
-	unsigned int temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
+/* Constructors and Destructors */
 Board::Board() {
 	dim = 0;
 	N = 0;
-	gB = nullptr;
-	dType = 0;
-	dist = 0;
-	mov = 0;
-	zRow = 0;
-	zCol = 0;
-	inver = 0;
-	priority = 0;
+	board = nullptr;
+    dType = 0;
+    dist = 0;
+    mov = 0;
+    priority = 0;
+    inver = 0;
+    zRow = 0;
+    zCol = 0;
 }
 
 Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
-	unsigned int index = 0;
 	dim = sqrt(n);
 	N = n;
 	dType = type;
 	mov = m;
-	dist = 0; // initialize dist
-	zRow = 0; // initialize zRow
-	zCol = 0;
-	inver = 0;
+	// initial values which will be redefined
+	dist = 0; 
 	priority = 0;
-	if (!n) gB = nullptr;
-	else {
-		// setup the board
-		gB = new unsigned int[N];
-		// fill in its values
-		for(unsigned int i = 0; i < N; i++) {
-			gB[i] = b[i];
-			if (b[i] == 0) index = i;
+	inver = 0;
+	zRow = 0;
+	zCol = 0;
+	board = nullptr;
+	if (!n) return;
+	board = new unsigned int[N];
+	for(unsigned int i = 0; i < N; i++) {
+		board[i] = b[i];
+		if (board[i] == 0) {
+			zRow = i / dim;
+			zCol = abs(i - (zRow * dim));
 		}
-		zRow = index / dim;
-		zCol = abs(index - ((int)zRow * dim));
-		// update dist
-		if (dType == 'm') dist = calcMan();
-		else if (dType == 'h') dist = calcHam();
-		inver = countInvers();
-		priority = dist + mov;
 	}
+	if (dType == 'm') dist = calcManhattan();
+	else if (dType == 'h') dist = calcHamming();
+	priority = dist + mov;
+	inver = calcInversions();
 }
 
 Board::~Board() {
-	if (gB) delete[] gB;
+	if (board) delete[] board;
 }
 
-bool Board::is_solvable() {
-	if (dim % 2 != 0 && inver % 2 == 0) return true;
-	else if (dim % 2 == 0 && (inver + zRow) % 2 != 0) return true;
-    return false;
-}
-
-bool Board::is_goal() {
-    return (dist == 0);
-}
-
-void Board::neighbors(std::vector<Board *> *neigh, char type) {
-	if (!gB) return;
-	bool direction[4] = {true, true, true, true};
-	/* 3 cases:
-		Corner: 2 neighbors
-		Edge: 3 neighbors
-		Else: 4 neighbors
-	*/
-	if ((zRow == 0 && zCol == 0) || (zRow == 0 && zCol == dim - 1) || (zRow == dim - 1 && zCol == 0) || (zRow == dim - 1 && zCol == dim - 1)) {
-		// corners case
-		if (zRow != zCol) {
-			if (zRow == 0) {
-				// up and right (top right corner)
-				direction[1] = false;
-				direction[2] = false;
-			} else {
-				// down and left (bottom left corner)
-				direction[0] = false;
-				direction[3] = false;
-			}
-		} else {
-			if (zRow == 0) {
-				// up and left (top left corner)
-				direction[1] = false;
-				direction[3] = false;
-			} else {
-				// down and right (bottom right corner)
-				direction[0] = false;
-				direction[2] = false;
-			}
-		}
-	} else if (zRow == 0 || zCol == 0 || zRow == dim - 1 || zCol == dim - 1) {
-		// edges case
-		// up, left, right
-		if (zRow == 0) direction[1] = false;
-		// up, down, left
-		else if (zCol == 0) direction[3] = false;
-		// down, left, right
-		else if (zRow == dim - 1) direction[0] = false;
-		// up, down, right
-		else direction[2] = false;
-	}
-
-	if (direction[0]) {
-		// swap up
-		swap(&gB[zRow * dim + zCol], &gB[(zRow + 1)* dim + zCol]);
-		neigh->push_back(new Board(gB, N, mov + 1, dType));
-		swap(&gB[zRow * dim + zCol], &gB[(zRow + 1)* dim + zCol]);
-	}
-	if (direction[1]) {
-		// swap down
-		swap(&gB[zRow * dim + zCol], &gB[(zRow - 1)* dim + zCol]);
-		neigh->push_back(new Board(gB, N, mov + 1, dType));
-		swap(&gB[zRow * dim + zCol], &gB[(zRow - 1)* dim + zCol]);
-	}
-	if (direction[2]) {
-		// swap left
-		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol + 1)]);
-		neigh->push_back(new Board(gB, N, mov + 1, dType));
-		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol + 1)]);
-	}
-	if (direction[3]) {
-		// swap right
-		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol - 1)]);
-		neigh->push_back(new Board(gB, N, mov + 1, dType));
-		swap(&gB[zRow * dim + zCol], &gB[zRow * dim + (zCol - 1)]);
-	}
-}
-
-unsigned int Board::get_n_moves() {
-    return mov;
-}
-
-unsigned int Board::calcHam() {
-	unsigned int ham = 0;
-	if (!gB) return ham;
-	for(unsigned int i = 0; i < N; i++) {
-		if (gB[i] != 0 && gB[i] != i + 1) ham++;
-	}
-	return ham;
-}
-
-unsigned int Board::hamming() {
-    return dist;
-}
-
-unsigned int Board::calcMan() {
+/* Private Helpers */
+unsigned int Board::calcManhattan() {
 	unsigned int man = 0;
-	if (!gB) return man;
-	int index = 0;
-	int sR = 0;
-	int sC = 0;
-	int aR = 0;
-	int aC = 0;
-	// taking advantage of index = r * dim + c formula
+	if (!board) return man;
+	int solvIndex = 0;
+	int solvRow = 0;
+	int solvCol = 0;
+	int actRow = 0;
+	int actCol = 0;
 	for(unsigned int i = 0; i < N; i++) {
-		// ignore the empty element
-		if (gB[i] == 0) continue;
-		index = gB[i] - 1;
-		// if the element is in the right space, no need to do any calculations
-		if ((int)i == index) continue;
-		sR = index / dim;
-		sC = abs(index - (sR * dim));
-		aR = i / dim;
-		aC = abs(i - (aR * dim));
-		man += abs(sR - aR) + abs(sC - aC);
+		if (board[i] == 0) continue; // ignore zero element
+		solvIndex = board[i] - 1;
+		solvRow = solvIndex / dim;
+		solvCol = abs(solvIndex - (solvRow * dim));
+		actRow = i / dim;
+		actCol = abs(i - (actRow * dim));
+		man += abs(solvRow - actRow) + abs(solvCol - actCol);  
 	}
 	return man;
 }
 
-unsigned int Board::manhattan() {
-    return dist;
+unsigned int Board::calcHamming() {
+	unsigned int ham = 0;
+	if (!board) return ham;
+	for(unsigned int i = 0; i < N; i++) {
+		if (board[i] != 0 && board[i] != i + 1) ham++;
+	}
+	return ham;
 }
 
-unsigned int Board::countInvers() {
-	unsigned int count = 0;
-	if (!gB) return count;
+unsigned int Board::calcInversions() {
+	unsigned int inv = 0;
+	if (!board) return inv;
 	for(unsigned int i = 0; i < N; i++) {
 		for(unsigned int j = i + 1; j < N; j++) {
-			if (gB[i] > gB[j] && gB[i] != 0 && gB[j] != 0) count++;
+			if (board[i] != 0 && board[j] != 0 && board[i] > board[j]) inv++;
 		}
 	}
-    return count;
+	return inv;
+}
+
+/* Public Methods */
+bool Board::is_solvable() {
+	if (dim % 2 != 0 && inver % 2 == 0) return true;
+	else if (dim % 2 == 0 && (inver + zRow) % 2 != 0) return true;
+	return false;
+}
+
+bool Board::is_goal() {
+	return (dist == 0);
+}
+
+void Board::neighbors(std::vector<Board *> *neigh, char type) {
+	if (!board) return;
+	unsigned int copy[N];
+	for(unsigned i = 0; i < N; i++) copy[i] = board[i];
+	// index: 0 is up, 1 is down, 2 is left, 3 is right
+	bool direction[4] = {true, true, true, true}; 
+	// first 4 if statements deal with corners, next 4 are edges
+	if (zRow == 0 && zCol == 0) {
+		// up and left (top left corner)
+		direction[1] = false;
+		direction[3] = false;
+	} else if (zRow == 0 && zCol == dim - 1) {
+		// up and right (top right corner)
+		direction[1] = false;
+		direction[2] = false;
+	} else if (zRow == dim - 1 && zCol == 0) {
+		// down and left (bottom left corner)
+		direction[0] = false;
+		direction[3] = false;
+	} else if (zRow == dim - 1 && zCol == dim - 1) {
+		// down and right (bottom right corner)
+		direction[0] = false;
+		direction[2] = false;
+	} else if (zRow == 0 && zCol != 0 && zCol != dim - 1) {
+		// up, left, right
+		direction[1] = false;
+	} else if (zRow == dim - 1 && zCol != 0 && zCol != dim - 1) {
+		// up, down, right
+		direction[0] = false;
+	} else if (zCol == 0 && zRow != 0 && zRow != dim - 1) {
+		// down, left, right
+		direction[3] = false;
+	} else if (zCol == dim - 1 && zRow != 0 && zRow != dim - 1) {
+		// up, down, right
+		direction[2] = false;
+	}
+
+	if (direction[0]) {
+		// swap zero up
+		copy[zRow * dim + zCol] = copy[(zRow + 1) * dim + zCol]; 
+		copy[(zRow + 1) * dim + zCol] = 0;
+		neigh->push_back(new Board(copy, N, mov + 1, dType));
+		// swap back
+		copy[(zRow + 1) * dim + zCol] = copy[zRow * dim + zCol];
+		copy[zRow * dim + zCol] = 0;
+	}
+	if (direction[1]) {
+		// swap zero down
+		copy[zRow * dim + zCol] = copy[(zRow - 1) * dim + zCol]; 
+		copy[(zRow - 1) * dim + zCol] = 0;
+		neigh->push_back(new Board(copy, N, mov + 1, dType));
+		// swap back
+		copy[(zRow - 1) * dim + zCol] = copy[zRow * dim + zCol];
+		copy[zRow * dim + zCol] = 0;
+	}
+	if (direction[2]) {
+		// swap zero left
+		copy[zRow * dim + zCol] = copy[zRow * dim + (zCol + 1)]; 
+		copy[zRow * dim + (zCol + 1)] = 0;
+		neigh->push_back(new Board(copy, N, mov + 1, dType));
+		// swap back
+		copy[zRow * dim + (zCol + 1)] = copy[zRow * dim + zCol];
+		copy[zRow * dim + zCol] = 0;
+	}
+	if (direction[3]) {
+		// swap zero right
+		copy[zRow * dim + zCol] = copy[zRow * dim + (zCol - 1)]; 
+		copy[zRow * dim + (zCol - 1)] = 0;
+		neigh->push_back(new Board(copy, N, mov + 1, dType));
+		// swap back
+		copy[zRow * dim + (zCol - 1)] = copy[zRow * dim + zCol];
+		copy[zRow * dim + zCol] = 0;
+	}
+}
+
+unsigned int Board::get_n_moves() {
+	return mov;
+}
+
+unsigned int Board::hamming() {
+	return dist;
+}
+
+unsigned int Board::manhattan() {
+	return dist;
 }
 
 unsigned int Board::inversions() {
 	return inver;
 }
 
-unsigned int Board::getZRow() {
-	return zRow;
-}
-
-unsigned int Board::getZCol() {
-	return zCol;
-}
-
 void Board::print_board() {
-	if (!gB) return;
-    for (unsigned int i = 0 ; i < N; i ++) {
-        std::cout << gB[i] << " ";
+    // the loop below assumes that `N` is the length of your array, 
+    // if you have another variable name for this, please adjust 
+    // the code properly
+    // (for a 3 by 3 board, the value of N is 9)
+    // also, if you have another name for `board` just replace it below
+    for (unsigned int i = 0 ; i < N ; i ++) {
+        std::cout << board[i] << " ";
     }
 }
 
-void Board::myPrintBoard() {
-	if (!gB) return;
+void Board::pretty_print() {
+	if (!board) return;
 	for(unsigned int i = 0; i < N; i++) {
-		std::cout << gB[i] << ' ';
+		std::cout << board[i] << " ";
 		if ((i + 1) % dim == 0) std::cout << std::endl;
 	}
 	std::cout << std::endl;
 }
 
-std::string Board::boardToString() {
-	std::string output = "";
-	if (!gB) return output;
-	for(unsigned int i = 0; i < N; i++) {
-		output += std::to_string(gB[i]);
-	}
-	return output;
-}
-
 unsigned int Board::getPriority() {
 	return priority;
 }
+
+std::string Board::boardToStr() {
+	std::string str = "";
+	if (!board) return str;
+	for(unsigned int i = 0; i < N; i++) {
+		str += std::to_string(board[i]);
+	}
+	return str;
+} 
+
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 bool Comparator::operator() (Board *b1, Board *b2) {

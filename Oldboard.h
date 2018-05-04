@@ -1,28 +1,27 @@
 #ifndef __BOARD_H__
 #define __BOARD_H__
 
-#include <string>
 #include <vector>
+#include <string>
 
 class Board {
     private:
         // TODO
         // define your data members and private methods here
-        int dim;
+        unsigned int dim;
         unsigned int N;
-        unsigned int* board;
+        unsigned int* gB;
         char dType;
         unsigned int dist;
         unsigned int mov;
-        unsigned int priority;
+        unsigned int zRow;
+        unsigned int zCol;
         unsigned int inver;
-        int zRow;
-        int zCol;
-        // private helpers
-        unsigned int calcManhattan();
-        unsigned int calcHamming();
-        unsigned int calcInversions();
-
+        unsigned int priority;
+        // helpers
+        unsigned int calcHam();
+        unsigned int calcMan();
+        unsigned int countInvers();
 
     public:
         // default constructor (for creating an empty board)
@@ -30,7 +29,7 @@ class Board {
         // full constructor
         // b: an initial board configuration
         // the board is just a sequence of numbers in row-major order (including the zero element)
-        // n: number of elements in the board (including 0, for a 3x3 board n should be 9)
+        // n: number of elements in the board (excluding 0) so 3 by 3 is n = 8
         // m: an initial number of moves
         // type: distance to be used 'm' for manhattan and 'b' for hamming
         Board(unsigned int *b, unsigned int n, unsigned int m, char type);
@@ -51,17 +50,18 @@ class Board {
         unsigned int manhattan();
         // counts the number of inversions on a particular board
         unsigned int inversions();
+        /* Added Helpers */
+        unsigned int getZRow();
+        unsigned int getZCol();
+        void myPrintBoard();
         void print_board();
-        // Added methods begin here
-        void pretty_print();
+        std::string boardToString();
         unsigned int getPriority();
-        std::string boardToStr();
-        
 };
 
 class Comparator {
     public:
-       bool operator() (Board *b1, Board *b2);
+       bool operator() (Board *n1, Board *n2);
 };
 
 #endif
