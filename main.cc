@@ -82,7 +82,7 @@ int main(int argc, char **argv) {
     	puzzle[i] = num;
     }
     // calls the solver passing the values of the board and the search type
-    //solve(puzzle, len, type);
-    testMethods(puzzle, len, type);
+    solve(puzzle, len, type);
+    //testMethods(puzzle, len, type);
     return 0;
 }
