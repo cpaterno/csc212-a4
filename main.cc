@@ -1,6 +1,9 @@
 #include "board.h"
 
 #include <iostream>
+#include <vector>
+#include <queue>
+#include <unordered_set>
 
 
 void testMethods(unsigned int *b, unsigned int n, char type) {
@@ -30,7 +33,35 @@ void testMethods(unsigned int *b, unsigned int n, char type) {
 // n: number of elements in the board (including 0)
 // type: distance to be used 'm' for manhattan and 'b' for hamming
 void solve(unsigned int *b, unsigned int n, char type) {
-    // TODO
+    Board root = Board(b, n, 0, type);
+    std::vector<Board*> neigh;
+    std::string boardStr = root.boardToStr();
+    std::priority_queue<Board*, std::vector<Board*>, Comparator> boardQ;
+    std::unordered_set<std::string> visited;
+    boardQ.push(&root);
+    visited.insert(boardStr);
+    Board *goalBoard = nullptr;
+    while(!boardQ.empty()) {
+        goalBoard = boardQ.top();
+        boardQ.pop();
+        if (goalBoard->is_goal()) {
+            std::cout <<"Number of moves: " << goalBoard->get_n_moves();
+            break;
+        }
+        if(!goalBoard->is_solvable()) {
+            std::cout << "Unsolvable board";
+            break;
+        }
+        goalBoard->neighbors(&neigh, type);
+        for(unsigned int i = 0; i < neigh.size(); i++) {
+            boardStr = neigh[i]->boardToStr();
+            if (visited.find(boardStr) == visited.end()) {
+                boardQ.push(neigh[i]);
+                visited.insert(boardStr);
+            }
+        }
+        neigh.clear();
+    }
 }
 
 // -----------------------------------------------------------------------
@@ -52,6 +83,6 @@ int main(int argc, char **argv) {
     }
     // calls the solver passing the values of the board and the search type
     solve(puzzle, len, type);
-    testMethods(puzzle, len, type);
+    //testMethods(puzzle, len, type);
     return 0;
 }
