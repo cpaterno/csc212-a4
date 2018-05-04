@@ -46,10 +46,12 @@ void solve(unsigned int *b, unsigned int n, char type) {
         boardQ.pop();
         if (goalBoard->is_goal()) {
             std::cout <<"Number of moves: " << goalBoard->get_n_moves();
+            delete goalBoard;
             break;
         }
         if(!goalBoard->is_solvable()) {
             std::cout << "Unsolvable board";
+            delete goalBoard;
             break;
         }
         goalBoard->neighbors(&neigh, type);
@@ -61,6 +63,12 @@ void solve(unsigned int *b, unsigned int n, char type) {
             }
         }
         neigh.clear();
+    }
+    // mem clean up
+    while(!boardQ.empty()) {
+        goalBoard = boardQ.top();
+        delete goalBoard;
+        boardQ.pop();
     }
 }
 
