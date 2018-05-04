@@ -67,8 +67,8 @@ void solve(unsigned int *b, unsigned int n, char type) {
     // mem clean up
     while(!boardQ.empty()) {
         goalBoard = boardQ.top();
-        delete goalBoard;
         boardQ.pop();
+        delete goalBoard;
     }
 }
 
