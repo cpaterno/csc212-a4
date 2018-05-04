@@ -35,12 +35,14 @@
 // type: distance to be used 'm' for manhattan and 'b' for hamming
 void solve(unsigned int *b, unsigned int n, char type) {
     Board root = Board(b, n, 0, type);
+    std::vector<Board*> neigh;
     std::string boardStr = root.boardToString();
     std::priority_queue<Board*, std::vector<Board*>, Comparator> boardQ;
     std::unordered_set<std::string> visited;
     boardQ.push(&root);
     visited.insert(boardStr);
     Board* goalBoard = nullptr;
+    std::unordered_set<std::string>::const_iterator it;
     while(!boardQ.empty()) {
         goalBoard = boardQ.top();
         boardQ.pop();
@@ -52,15 +54,16 @@ void solve(unsigned int *b, unsigned int n, char type) {
             std::cout << "Unsolvable board";
             break;
         }
-        std::vector<Board*> neigh;
         goalBoard->neighbors(&neigh, type);
         for(Board* i : neigh) {
             boardStr = i->boardToString();
-            if (visited.find(boardStr) == visited.end()) {
+            it = visited.find(boardStr); 
+            if (it == visited.end()) {
                 boardQ.push(i);
                 visited.insert(boardStr);
-            } else delete i;
+            }
         }
+        neigh.clear();
     }
 }
 
