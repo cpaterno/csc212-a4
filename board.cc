@@ -45,7 +45,10 @@ Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
 }
 
 Board::~Board() {
-	if (board) delete[] board;
+	if (board) {
+		delete[] board;
+		board = nullptr;
+	}
 }
 
 /* Private Helpers */
