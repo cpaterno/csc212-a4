@@ -1,12 +1,28 @@
 #ifndef __BOARD_H__
 #define __BOARD_H__
 
+#include <string>
 #include <vector>
 
 class Board {
     private:
         // TODO
         // define your data members and private methods here
+        int dim;
+        unsigned int N;
+        unsigned int* board;
+        char dType;
+        unsigned int dist;
+        unsigned int mov;
+        unsigned int priority;
+        unsigned int inver;
+        int zRow;
+        int zCol;
+        // private helpers
+        unsigned int calcManhattan();
+        unsigned int calcHamming();
+        unsigned int calcInversions();
+
 
     public:
         // default constructor (for creating an empty board)
@@ -36,6 +52,16 @@ class Board {
         // counts the number of inversions on a particular board
         unsigned int inversions();
         void print_board();
+        // Added methods begin here
+        void pretty_print();
+        unsigned int getPriority();
+        std::string boardToStr();
+        
+};
+
+class Comparator {
+    public:
+       bool operator() (Board *b1, Board *b2);
 };
 
 #endif

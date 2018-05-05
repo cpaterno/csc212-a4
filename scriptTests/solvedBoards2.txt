@@ -1,0 +1,54 @@
+puzzles/puzzle00.txt
+Number of moves: 0puzzles/puzzle01.txt
+Number of moves: 1puzzles/puzzle02.txt
+Number of moves: 2puzzles/puzzle03.txt
+Number of moves: 3puzzles/puzzle04.txt
+Number of moves: 4puzzles/puzzle05.txt
+Number of moves: 5puzzles/puzzle06.txt
+Number of moves: 6puzzles/puzzle07.txt
+Number of moves: 7puzzles/puzzle08.txt
+Number of moves: 8puzzles/puzzle09.txt
+Number of moves: 9puzzles/puzzle10.txt
+Number of moves: 10puzzles/puzzle11.txt
+Number of moves: 11puzzles/puzzle12.txt
+Number of moves: 12puzzles/puzzle13.txt
+Number of moves: 13puzzles/puzzle14.txt
+Number of moves: 14puzzles/puzzle15.txt
+Number of moves: 15puzzles/puzzle16.txt
+Number of moves: 16puzzles/puzzle17.txt
+Number of moves: 19puzzles/puzzle18.txt
+Number of moves: 18puzzles/puzzle19.txt
+Number of moves: 19puzzles/puzzle20.txt
+Number of moves: 20puzzles/puzzle21.txt
+Number of moves: 21puzzles/puzzle22.txt
+Number of moves: 22puzzles/puzzle23.txt
+Number of moves: 23puzzles/puzzle24.txt
+Number of moves: 24puzzles/puzzle25.txt
+Number of moves: 25puzzles/puzzle26.txt
+Number of moves: 26puzzles/puzzle27.txt
+Number of moves: 27puzzles/puzzle28.txt
+Number of moves: 28puzzles/puzzle29.txt
+Number of moves: 29puzzles/puzzle2x2-00.txt
+Number of moves: 0puzzles/puzzle2x2-01.txt
+Number of moves: 1puzzles/puzzle2x2-02.txt
+Number of moves: 2puzzles/puzzle2x2-03.txt
+Number of moves: 3puzzles/puzzle2x2-04.txt
+Number of moves: 4puzzles/puzzle2x2-05.txt
+Number of moves: 5puzzles/puzzle2x2-06.txt
+Number of moves: 6puzzles/puzzle2x2-unsolvable1.txt
+Unsolvable boardpuzzles/puzzle2x2-unsolvable2.txt
+Unsolvable boardpuzzles/puzzle2x2-unsolvable3.txt
+Unsolvable boardpuzzles/puzzle30.txt
+Number of moves: 30puzzles/puzzle31.txt
+Number of moves: 31puzzles/puzzle32.txt
+Number of moves: 32puzzles/puzzle33.txt
+Number of moves: 33puzzles/puzzle34.txt
+puzzles/puzzle35.txt
+puzzles/puzzle36.txt
+puzzles/puzzle37.txt
+puzzles/puzzle38.txt
+puzzles/puzzle39.txt
+puzzles/puzzle3x3-00.txt
+Number of moves: 0puzzles/puzzle3x3-01.txt
+Number of moves: 1puzzles/puzzle3x3-02.txt
+Number of moves: 2puzzles/puzzle3x3-03.txt

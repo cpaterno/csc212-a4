@@ -15,8 +15,8 @@ Using A* Search to Solve the N-Puzzle Problem
 - [x] `inversions` method
 
 # Main Checklist 
-- [ ] `solve` method (A* search)
+- [x] `solve` method (A* search)
 - [x] Write board comparator class
-- [ ] Use priority queue and unordered set (hash table)
+- [x] Use priority queue and unordered set (hash table)
 - [x] File IO
 - [ ] Comments and Optimizations

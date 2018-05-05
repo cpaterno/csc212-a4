@@ -1,0 +1,5 @@
+puzzle17 -> 19 moves -> nvm right
+puzzle42 -> 44 moves -> nvm right
+puzzle4x4-44 -> 46 moves -> wrong 
+puzzle4x4-78 -> crashed -> 
+puzzle4x4-80 -> crashed
