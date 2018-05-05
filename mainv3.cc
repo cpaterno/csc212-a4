@@ -46,12 +46,12 @@ void solve(unsigned int *b, unsigned int n, char type) {
         boardQ.pop();
         if (goalBoard->is_goal()) {
             std::cout <<"Number of moves: " << goalBoard->get_n_moves();
-            delete goalBoard;
+            //delete goalBoard;
             break;
         }
         if(!goalBoard->is_solvable()) {
             std::cout << "Unsolvable board";
-            delete goalBoard;
+            //delete goalBoard;
             break;
         }
         goalBoard->neighbors(&neigh, type);
@@ -65,11 +65,11 @@ void solve(unsigned int *b, unsigned int n, char type) {
         neigh.clear();
     }
     // mem clean up
-    while(!boardQ.empty()) {
+    /*while(!boardQ.empty()) {
         goalBoard = boardQ.top();
         boardQ.pop();
         delete goalBoard;
-    }
+    }*/
 }
 
 // -----------------------------------------------------------------------
@@ -78,6 +78,7 @@ void solve(unsigned int *b, unsigned int n, char type) {
 // -----------------------------------------------------------------------
 int main(int argc, char **argv) {
     // reads the search type from a command line argument (either h or m)
+    if (argc != 2) return 1;
     char type = argv[1][0];
     unsigned int dimension = 0;
     unsigned int num = 0;

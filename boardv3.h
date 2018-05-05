@@ -15,14 +15,6 @@ class Board {
         unsigned int dist;
         unsigned int mov;
         unsigned int priority;
-        unsigned int inver;
-        int zRow;
-        int zCol;
-        // private helpers
-        unsigned int calcManhattan();
-        unsigned int calcHamming();
-        unsigned int calcInversions();
-
 
     public:
         // default constructor (for creating an empty board)
