@@ -55,11 +55,13 @@ void solve(unsigned int *b, unsigned int n, char type) {
     	// base case 1: board is solved
     	if (goalBoard->is_goal()) {
     		std::cout << "Number of moves: " << goalBoard->get_n_moves();
+    		delete goalBoard;
     		break;
     	}
     	// base case 2: board is unsolvable
     	if (!goalBoard->is_solvable()) {
     		std::cout << "Unsolvable board";
+    		delete goalBoard;
     		break; 
     	}
     	// create a vector of neighbors
@@ -77,6 +79,12 @@ void solve(unsigned int *b, unsigned int n, char type) {
     			visited.insert(boardStr);
     		}
     	}
+    }
+    // mem cleanup
+    while(!boardQ.empty()) {
+    	goalBoard = boardQ.top();
+    	boardQ.pop();
+    	delete goalBoard;
     }
 }
 
