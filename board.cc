@@ -85,53 +85,56 @@ bool Board::is_goal() {
 void Board::neighbors(std::vector<Board *> *neigh, char type) {
 	// guard if board is nullptr
 	if (!board) return;
-	// copying board's data so it is not modified
-	unsigned int copy[N];
-	for(unsigned int i = 0; i < N; i++) copy[i] = board[i];
 	// calculate the exact row and column of the zIndex
 	// using the formula: index = row * dimension + column
 	int zRow = zIndex / dim;
-	int zCol = abs(zIndex - (zRow * dim)); 
+	int zCol = abs(zIndex - (zRow * dim));
+	// pointer that will point to the updated board, upon completed move
+	Board* neighborBoard = nullptr; 
 	// do the following movements depending on the values of zRow and zCol
 	if (zRow > 0) {
 		// move zero up
-		copy[zIndex] = copy[(zRow - 1) * dim + zCol];
-		copy[(zRow - 1) * dim + zCol] = 0;
+		board[zIndex] = board[(zRow - 1) * dim + zCol];
+		board[(zRow - 1) * dim + zCol] = 0;
 		// push neighbor into vector
-		neigh->push_back(new Board(copy, N, (moves + 1), dType));
+		neighborBoard = new Board(board, N, (moves + 1), dType);
+		neigh->push_back(neighborBoard);
 		// move zero back to original spot
-		copy[(zRow - 1) * dim + zCol] = copy[zIndex];
-		copy[zIndex] = 0;
+		board[(zRow - 1) * dim + zCol] = board[zIndex];
+		board[zIndex] = 0;
 	}
 	if (zRow < dim - 1) {
 		// move zero down
-		copy[zIndex] = copy[(zRow + 1) * dim + zCol];
-		copy[(zRow + 1) * dim + zCol] = 0;
+		board[zIndex] = board[(zRow + 1) * dim + zCol];
+		board[(zRow + 1) * dim + zCol] = 0;
 		// push neighbor into vector
-		neigh->push_back(new Board(copy, N, (moves + 1), dType));
+		neighborBoard = new Board(board, N, (moves + 1), dType);
+		neigh->push_back(neighborBoard);
 		// move zero back to original spot
-		copy[(zRow + 1) * dim + zCol] = copy[zIndex];
-		copy[zIndex] = 0;
+		board[(zRow + 1) * dim + zCol] = board[zIndex];
+		board[zIndex] = 0;
 	}
 	if (zCol > 0) {
 		// move zero left
-		copy[zIndex] = copy[zRow * dim + (zCol - 1)];
-		copy[zRow * dim + (zCol - 1)] = 0;
+		board[zIndex] = board[zRow * dim + (zCol - 1)];
+		board[zRow * dim + (zCol - 1)] = 0;
 		// push neighbor into vector
-		neigh->push_back(new Board(copy, N, (moves + 1), dType));
+		neighborBoard = new Board(board, N, (moves + 1), dType);
+		neigh->push_back(neighborBoard);
 		// move zero back to original spot
-		copy[zRow * dim + (zCol - 1)] = copy[zIndex];
-		copy[zIndex] = 0;
+		board[zRow * dim + (zCol - 1)] = board[zIndex];
+		board[zIndex] = 0;
 	}
 	if (zCol < dim - 1) {
 		// move zero right
-		copy[zIndex] = copy[zRow * dim + (zCol + 1)];
-		copy[zRow * dim + (zCol + 1)] = 0;
+		board[zIndex] = board[zRow * dim + (zCol + 1)];
+		board[zRow * dim + (zCol + 1)] = 0;
 		// push neighbor into vector
-		neigh->push_back(new Board(copy, N, (moves + 1), dType));
+		neighborBoard = new Board(board, N, (moves + 1), dType);
+		neigh->push_back(neighborBoard);
 		// move zero back to original spot
-		copy[zRow * dim + (zCol + 1)] = copy[zIndex];
-		copy[zIndex] = 0;
+		board[zRow * dim + (zCol + 1)] = board[zIndex];
+		board[zIndex] = 0;
 	}
 }
 
