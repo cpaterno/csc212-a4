@@ -56,12 +56,14 @@ void solve(unsigned int *b, unsigned int n, char type) {
         // base case 1: board is solved
         if (goalBoard->is_goal()) {
             std::cout << "Number of moves: " << goalBoard->get_n_moves();
+            // free the final board
             delete goalBoard;
             break;
         }
         // base case 2: board is unsolvable
         if (!goalBoard->is_solvable()) {
             std::cout << "Unsolvable board";
+            // free the final board
             delete goalBoard;
             break;
         }
@@ -78,10 +80,13 @@ void solve(unsigned int *b, unsigned int n, char type) {
             if (visited.find(boardStr) == visited.end()) {
                 boardQ.emplace(neigh[i]);
                 visited.insert(boardStr);
+            // free neighbors not put in the priority queue
             } else delete neigh[i];
         }
+        // free the current board being examined
         delete goalBoard;
     }
+    // clean up all mem in the priority queue
     while(!boardQ.empty()) {
         goalBoard = boardQ.top();
         boardQ.pop();
