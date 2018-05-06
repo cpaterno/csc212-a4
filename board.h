@@ -13,10 +13,10 @@ class Board {
         // the dimension of each side of the board
         int dim = 0;
         // the amount of moves made to get to this board
-        unsigned int moves;
+        unsigned int moves = 0;
         // distance type
         char dType = 0;
-        // priority of the board used for A* search
+        // priority of the board (priority = distance + moves) used for A* search
         unsigned int priority = 0;
         // index of the empty space in the board (used in calculations)
         int zIndex = 0;
@@ -24,7 +24,7 @@ class Board {
 
     public:
         // default constructor (for creating an empty board)
-        Board() { }
+        Board();
         // full constructor
         // b: an initial board configuration
         // the board is just a sequence of numbers in row-major order (including the zero element)
@@ -33,7 +33,7 @@ class Board {
         // type: distance to be used 'm' for manhattan and 'h' for hamming
         Board(unsigned int *b, unsigned int n, unsigned int m, char type);
         // destructor
-        ~Board() { }
+        ~Board();
 
         // verifies whether the board is solvable
         bool is_solvable();

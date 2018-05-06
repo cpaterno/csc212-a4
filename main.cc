@@ -20,7 +20,7 @@ void testMethods(unsigned int *b, unsigned int n, char type) {
         neighbors[i]->pretty_print();
         delete neighbors[i];
     }
-    std::cout << root.boardToStr() << std::endl;
+    //std::cout << root.boardToStr() << std::endl;
     std::cout << std::endl;
 }
 
@@ -97,7 +97,7 @@ int main(int argc, char **argv) {
     	std::cin >> input[i];
     }
     // calls the solver passing the values of the board and the search type
-    solve(input, n, type);
-    //testMethods(input, n, type);
+    //solve(input, n, type);
+    testMethods(input, n, type);
     return 0;
 }

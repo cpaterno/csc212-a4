@@ -7,11 +7,15 @@ void copyArray(unsigned int* original, unsigned int* copy, unsigned int N) {
 	for(unsigned int i = 0; i < N; i++) copy[i] = original[i];
 }
 
+
+Board::Board() {
+	
+}
+
 /*Constructors and Destructor*/
 
 // Parameterized Constructor
 Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
-	if (n == 0) return;
 	// update the following to the given parameter
 	N = n;
 	dim = sqrt(N);
@@ -20,6 +24,7 @@ Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
 	// value of distance, used to calculate priority
 	unsigned int dist = 0;
 	// have board point to an array representing a board on the stack
+	if (n == 0) return;
 	board = b;
 	// update zIndex
 	for(unsigned int i = 0; i < N; i++) {
@@ -30,6 +35,10 @@ Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
 	else if (dType == 'h') dist = hamming();
 	// update priority as the sum of distance + moves
 	priority = dist + moves;
+}
+
+Board::~Board() {
+	// nothing to delete
 }
 
 /*Public Methods*/
