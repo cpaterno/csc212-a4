@@ -9,12 +9,9 @@
 Board::Board() {
 	// Initialize all datamembers to zero
 	board = nullptr;
-	N = 0;
-	dim = 0;
-	moves = 0;
+	N = moves = priority = 0;
+	dim = zIndex = 0;
 	dType = 0;
-	priority = 0;
-	zIndex = 0;
 }
 
 // Parameterized Constructor
@@ -90,7 +87,7 @@ void Board::neighbors(std::vector<Board *> *neigh, char type) {
 	// pointer that will point to the updated board, upon completed move
 	Board* neighborBoard = nullptr; 
 	// do the following movements depending on the values of zRow and zCol
-	if (zRow > 0) {
+	if (zRow > 0 && zRow < dim) {
 		// move zero up
 		board[zIndex] = board[(zRow - 1) * dim + zCol];
 		board[(zRow - 1) * dim + zCol] = 0;
@@ -101,7 +98,7 @@ void Board::neighbors(std::vector<Board *> *neigh, char type) {
 		board[(zRow - 1) * dim + zCol] = board[zIndex];
 		board[zIndex] = 0;
 	}
-	if (zRow < dim - 1) {
+	if (zRow > - 1 && zRow < dim - 1) {
 		// move zero down
 		board[zIndex] = board[(zRow + 1) * dim + zCol];
 		board[(zRow + 1) * dim + zCol] = 0;
@@ -112,7 +109,7 @@ void Board::neighbors(std::vector<Board *> *neigh, char type) {
 		board[(zRow + 1) * dim + zCol] = board[zIndex];
 		board[zIndex] = 0;
 	}
-	if (zCol > 0) {
+	if (zCol > 0 && zCol < dim) {
 		// move zero left
 		board[zIndex] = board[zRow * dim + (zCol - 1)];
 		board[zRow * dim + (zCol - 1)] = 0;
@@ -123,7 +120,7 @@ void Board::neighbors(std::vector<Board *> *neigh, char type) {
 		board[zRow * dim + (zCol - 1)] = board[zIndex];
 		board[zIndex] = 0;
 	}
-	if (zCol < dim - 1) {
+	if (zCol > -1 && zCol < dim - 1) {
 		// move zero right
 		board[zIndex] = board[zRow * dim + (zCol + 1)];
 		board[zRow * dim + (zCol + 1)] = 0;
@@ -162,11 +159,8 @@ unsigned int Board::manhattan() {
 	// each element's solved position (row, col) and its actual 
 	// position (row, col), ignoring the empty element
 	unsigned int man = 0;
-	int solIndex = 0;
-	int solRow = 0;
-	int solCol = 0;
-	int actRow = 0;
-	int actCol = 0;
+	int solIndex, solRow, solCol, actRow actCol;
+	solIndex = solRow = solCol = actRow = actCol = 0;
 	// N casted as int to avoid unsigned int underflow
 	for(int i = 0; i < int(N); i++) {
 		if (board[i] == 0) continue;

@@ -10,16 +10,16 @@ class Board {
         unsigned int* board;
         // the number of elements in a board
         unsigned int N;
-        // the dimension of each side of the board
-        int dim;
         // the amount of moves made to get to this board
         unsigned int moves;
-        // distance type
-        char dType;
         // priority of the board used for A* search
         unsigned int priority;
         // index of the empty space in the board (used in calculations)
         int zIndex;
+        // the dimension of each side of the board
+        int dim;
+        // distance type
+        char dType;
 
 
     public:

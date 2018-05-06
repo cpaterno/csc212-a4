@@ -41,14 +41,13 @@ void solve(unsigned int *b, unsigned int n, char type) {
     // initialize minheap priority queue and hash table
     std::priority_queue<Board*, std::vector<Board*>, Comparator> boardQ;
     std::unordered_set<std::string> visited;
-    // add the first board and its string representation into
+    // add the first board and its string representation into 
     // the correct data structures
     boardQ.emplace(&root);
     visited.insert(boardStr);
     // while the queue is not empty or base cases not hit
     // do A* search
     while(!boardQ.empty()) {
-<<<<<<< HEAD
         // get the board with the lowest priority 
         // and remove it from the queue
         goalBoard = boardQ.top();
@@ -78,44 +77,6 @@ void solve(unsigned int *b, unsigned int n, char type) {
                 visited.insert(boardStr);
             }
         }
-=======
-    	// get the board with the lowest priority
-    	// and remove it from the queue
-    	goalBoard = boardQ.top();
-    	boardQ.pop();
-    	// base case 1: board is solved
-    	if (goalBoard->is_goal()) {
-    		std::cout << "Number of moves: " << goalBoard->get_n_moves();
-    		delete goalBoard;
-    		break;
-    	}
-    	// base case 2: board is unsolvable
-    	if (!goalBoard->is_solvable()) {
-    		std::cout << "Unsolvable board";
-    		delete goalBoard;
-    		break;
-    	}
-    	// create a vector of neighbors
-    	std::vector<Board*> neigh;
-    	goalBoard->neighbors(&neigh, type);
-    	// check if each neighbor has never been seen before
-    	// and if not add it to the queue and hash table
-    	for(unsigned int i = 0; i < neigh.size(); i++) {
-    		boardStr = neigh[i]->boardToStr();
-    		// if the string representation of the board is not
-    		// in the hash table, then we can add the board to the queue
-    		// and its string representation to the hash table
-    		if (visited.find(boardStr) == visited.end()) {
-    			boardQ.emplace(neigh[i]);
-    			visited.insert(boardStr);
-    		}
-    	}
->>>>>>> ed2de7b56fd505b0c6be257639936be70ab9e42a
-    }
-    while(!board.empty()) {
-        goalBoard = boardQ.top();
-        boardQ.pop();
-        delete boardQ;
     }
 }
 
