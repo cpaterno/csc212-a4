@@ -43,7 +43,7 @@ void solve(unsigned int *b, unsigned int n, char type) {
     std::unordered_set<std::string> visited;
     // add the first board and its string representation into 
     // the correct data structures
-    boardQ.push(&root);
+    boardQ.emplace(&root);
     visited.insert(boardStr);
     // while the queue is not empty or base cases not hit
     // do A* search
@@ -73,7 +73,7 @@ void solve(unsigned int *b, unsigned int n, char type) {
     		// in the hash table, then we can add the board to the queue
     		// and its string representation to the hash table
     		if (visited.find(boardStr) == visited.end()) {
-    			boardQ.push(neigh[i]);
+    			boardQ.emplace(neigh[i]);
     			visited.insert(boardStr);
     		}
     	}
