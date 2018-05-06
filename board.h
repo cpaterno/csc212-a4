@@ -7,19 +7,19 @@
 class Board {
     private:
         // array on the heap which represents the board
-        unsigned int* board = nullptr;
+        unsigned int* board;
         // the number of elements in a board
-        unsigned int N = 0;
+        unsigned int N;
         // the dimension of each side of the board
-        int dim = 0;
+        int dim;
         // the amount of moves made to get to this board
-        unsigned int moves = 0;
+        unsigned int moves;
         // distance type
-        char dType = 0;
-        // priority of the board (priority = distance + moves) used for A* search
-        unsigned int priority = 0;
+        char dType;
+        // priority of the board used for A* search
+        unsigned int priority;
         // index of the empty space in the board (used in calculations)
-        int zIndex = 0;
+        int zIndex;
 
 
     public:
@@ -63,9 +63,7 @@ class Board {
 // Comparator class passed to the STL priority queue
 class Comparator {
     public:
-       bool operator() (Board *b1, Board *b2) {
-            return (b1->getPriority() > b2->getPriority());
-       }
+       bool operator() (Board *b1, Board *b2);
 };
 
 #endif

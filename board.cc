@@ -3,42 +3,56 @@
 #include <iostream>
 #include <cmath>
 
-void copyArray(unsigned int* original, unsigned int* copy, unsigned int N) {
-	for(unsigned int i = 0; i < N; i++) copy[i] = original[i];
-}
-
-
-Board::Board() {
-	
-}
-
 /*Constructors and Destructor*/
+
+// Default Constructor
+Board::Board() {
+	// Initialize all datamembers to zero
+	board = nullptr;
+	N = 0;
+	dim = 0;
+	moves = 0;
+	dType = 0;
+	priority = 0;
+	zIndex = 0;
+}
 
 // Parameterized Constructor
 Board::Board(unsigned int *b, unsigned int n, unsigned int m, char type) {
-	// update the following to the given parameter
+	// initialize the following to the given parameter
 	N = n;
 	dim = sqrt(N);
 	moves = m;
 	dType = type;
+	board = nullptr;
+	priority = 0;
+	zIndex = 0;
+	// guard if n is zero return
+	if (n == 0) return;
 	// value of distance, used to calculate priority
 	unsigned int dist = 0;
-	// have board point to an array representing a board on the stack
-	if (n == 0) return;
-	board = b;
-	// update zIndex
+	// allocate memory on the heap for the board
+	board = new unsigned int[N];
+	// copy over values from b to board, initialize zIndex
 	for(unsigned int i = 0; i < N; i++) {
+		board[i] = b[i];
 		if (board[i] == 0) zIndex = i;
 	}
 	// calculate dist based on given distance type
 	if (dType == 'm') dist = manhattan();
 	else if (dType == 'h') dist = hamming();
-	// update priority as the sum of distance + moves
+	// initialize priority as the sum of distance + moves
 	priority = dist + moves;
 }
 
+// Destructor
 Board::~Board() {
-	// nothing to delete
+	// if the board exists, free its memory
+	// and set board to point to nullptr
+	if (board) {
+		delete[] board;
+		board = nullptr;
+	}
 }
 
 /*Public Methods*/
@@ -60,8 +74,8 @@ bool Board::is_solvable() {
 // Verifies whether the board is a goal board
 bool Board::is_goal() {
 	// taking advantage of priority formula
-	// if distance (distance can be calculated as priority - moves because
-	// priority is moves + distance) is 0, board is at its goal
+	// if priority - moves, which produces the distance,
+	// is 0 board is at its goal
 	return ((priority - moves) == 0);
 }
 
@@ -74,46 +88,51 @@ void Board::neighbors(std::vector<Board *> *neigh, char type) {
 	int zRow = zIndex / dim;
 	int zCol = abs(zIndex - (zRow * dim));
 	// pointer that will point to the updated board, upon completed move
-	unsigned int* upBoard = nullptr;
-	unsigned int* downBoard = nullptr;
-	unsigned int* leftBoard = nullptr;
-	unsigned int* rightBoard = nullptr; 
+	Board* neighborBoard = nullptr; 
 	// do the following movements depending on the values of zRow and zCol
-	if (zRow > 0 && zRow < dim) {
+	if (zRow > 0) {
 		// move zero up
-		upBoard = new unsigned int[N];
-		copyArray(board, upBoard, N);
-		upBoard[zIndex] = upBoard[(zRow - 1) * dim + zCol];
-		upBoard[(zRow - 1) * dim + zCol] = 0;
+		board[zIndex] = board[(zRow - 1) * dim + zCol];
+		board[(zRow - 1) * dim + zCol] = 0;
 		// push neighbor into vector
-		neigh->push_back(new Board(upBoard, N, (moves + 1), dType));
+		neighborBoard = new Board(board, N, (moves + 1), dType);
+		neigh->push_back(neighborBoard);
+		// move zero back to original spot
+		board[(zRow - 1) * dim + zCol] = board[zIndex];
+		board[zIndex] = 0;
 	}
-	if (zRow > -1 && zRow < dim - 1) {
+	if (zRow < dim - 1) {
 		// move zero down
-		downBoard = new unsigned int[N];
-		copyArray(board, downBoard, N);
-		downBoard[zIndex] = downBoard[(zRow + 1) * dim + zCol];
-		downBoard[(zRow + 1) * dim + zCol] = 0;
+		board[zIndex] = board[(zRow + 1) * dim + zCol];
+		board[(zRow + 1) * dim + zCol] = 0;
 		// push neighbor into vector
-		neigh->push_back(new Board(downBoard, N, (moves + 1), dType));
+		neighborBoard = new Board(board, N, (moves + 1), dType);
+		neigh->push_back(neighborBoard);
+		// move zero back to original spot
+		board[(zRow + 1) * dim + zCol] = board[zIndex];
+		board[zIndex] = 0;
 	}
-	if (zCol > 0 && zCol < dim) {
+	if (zCol > 0) {
 		// move zero left
-		leftBoard = new unsigned int[N];
-		copyArray(board, leftBoard, N);
-		leftBoard[zIndex] = leftBoard[zRow * dim + (zCol - 1)];
-		leftBoard[zRow * dim + (zCol - 1)] = 0;
+		board[zIndex] = board[zRow * dim + (zCol - 1)];
+		board[zRow * dim + (zCol - 1)] = 0;
 		// push neighbor into vector
-		neigh->push_back(new Board(leftBoard, N, (moves + 1), dType));
+		neighborBoard = new Board(board, N, (moves + 1), dType);
+		neigh->push_back(neighborBoard);
+		// move zero back to original spot
+		board[zRow * dim + (zCol - 1)] = board[zIndex];
+		board[zIndex] = 0;
 	}
-	if (zCol > -1 && zCol < dim - 1) {
+	if (zCol < dim - 1) {
 		// move zero right
-		rightBoard = new unsigned int[N];
-		copyArray(board, rightBoard, N);
-		rightBoard[zIndex] = rightBoard[zRow * dim + (zCol + 1)];
-		rightBoard[zRow * dim + (zCol + 1)] = 0;
+		board[zIndex] = board[zRow * dim + (zCol + 1)];
+		board[zRow * dim + (zCol + 1)] = 0;
 		// push neighbor into vector
-		neigh->push_back(new Board(rightBoard, N, (moves + 1), dType));
+		neighborBoard = new Board(board, N, (moves + 1), dType);
+		neigh->push_back(neighborBoard);
+		// move zero back to original spot
+		board[zRow * dim + (zCol + 1)] = board[zIndex];
+		board[zIndex] = 0;
 	}
 }
 
@@ -143,8 +162,11 @@ unsigned int Board::manhattan() {
 	// each element's solved position (row, col) and its actual 
 	// position (row, col), ignoring the empty element
 	unsigned int man = 0;
-	int solIndex, solRow, solCol, actRow, actCol;
-	solIndex = solRow = solCol = actRow = actCol = 0;
+	int solIndex = 0;
+	int solRow = 0;
+	int solCol = 0;
+	int actRow = 0;
+	int actCol = 0;
 	// N casted as int to avoid unsigned int underflow
 	for(int i = 0; i < int(N); i++) {
 		if (board[i] == 0) continue;
@@ -208,4 +230,11 @@ std::string Board::boardToStr() {
 		str += std::to_string(board[i]);
 	}
 	return str;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------
+// Comparator which returns true only if the first board's priority is 
+// greater than the second board's priority
+bool Comparator::operator() (Board *b1, Board *b2) {
+	return (b1->getPriority() > b2->getPriority());
 }
