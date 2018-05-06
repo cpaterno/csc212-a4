@@ -34,16 +34,17 @@ void testMethods(unsigned int *b, unsigned int n, char type) {
 // type: distance to be used 'm' for manhattan and 'b' for hamming
 void solve(unsigned int *b, unsigned int n, char type) {
     // initialize first board and a string representation of boards
-    Board root = Board(b, n, 0, type);
-    std::string boardStr = root.boardToStr();
+    Board* root = new Board(b, n, 0, type);
+    std::string boardStr = root->boardToStr();
     // pointer to min value in minheap priority queue
     Board* goalBoard = nullptr;
+    std::vector<Board*> memCleanup;
     // initialize minheap priority queue and hash table
     std::priority_queue<Board*, std::vector<Board*>, Comparator> boardQ;
     std::unordered_set<std::string> visited;
     // add the first board and its string representation into 
     // the correct data structures
-    boardQ.emplace(&root);
+    boardQ.emplace(root);
     visited.insert(boardStr);
     // while the queue is not empty or base cases not hit
     // do A* search
@@ -55,16 +56,19 @@ void solve(unsigned int *b, unsigned int n, char type) {
         // base case 1: board is solved
         if (goalBoard->is_goal()) {
             std::cout << "Number of moves: " << goalBoard->get_n_moves();
+            memCleanup.push_back(goalBoard);
             break;
         }
         // base case 2: board is unsolvable
         if (!goalBoard->is_solvable()) {
             std::cout << "Unsolvable board";
+            memCleanup.push_back(goalBoard);
             break; 
         }
         // create a vector of neighbors
         std::vector<Board*> neigh;
         goalBoard->neighbors(&neigh, type);
+        memCleanup.push_back(goalBoard);
         // check if each neighbor has never been seen before
         // and if not add it to the queue and hash table 
         for(unsigned int i = 0; i < neigh.size(); i++) {
@@ -75,8 +79,16 @@ void solve(unsigned int *b, unsigned int n, char type) {
             if (visited.find(boardStr) == visited.end()) {
                 boardQ.emplace(neigh[i]);
                 visited.insert(boardStr);
-            }
+            } else memCleanup.push_back(goalBoard);
         }
+    }
+    while(!boardQ.empty()) {
+        goalBoard = boardQ.top();
+        boardQ.pop();
+        memCleanup.push_back(goalBoard);
+    }
+    for(Board* d : memCleanup) {
+        delete d;
     }
 }
 
