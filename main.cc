@@ -42,35 +42,34 @@ void solve(unsigned int *b, unsigned int n, char type) {
     // initialize minheap priority queue and hash table
     std::priority_queue<Board*, std::vector<Board*>, Comparator> boardQ;
     std::unordered_set<std::string> visited;
-    // add the first board and its string representation into 
+    // add the first board and its string representation into
     // the correct data structures
     boardQ.emplace(root);
     visited.insert(boardStr);
     // while the queue is not empty or base cases not hit
     // do A* search
     while(!boardQ.empty()) {
-        // get the board with the lowest priority 
+        // get the board with the lowest priority
         // and remove it from the queue
         goalBoard = boardQ.top();
         boardQ.pop();
         // base case 1: board is solved
         if (goalBoard->is_goal()) {
             std::cout << "Number of moves: " << goalBoard->get_n_moves();
-            memCleanup.push_back(goalBoard);
+            delete goalBoard;
             break;
         }
         // base case 2: board is unsolvable
         if (!goalBoard->is_solvable()) {
             std::cout << "Unsolvable board";
-            memCleanup.push_back(goalBoard);
-            break; 
+            delete goalBoard;
+            break;
         }
         // create a vector of neighbors
         std::vector<Board*> neigh;
         goalBoard->neighbors(&neigh, type);
-        memCleanup.push_back(goalBoard);
         // check if each neighbor has never been seen before
-        // and if not add it to the queue and hash table 
+        // and if not add it to the queue and hash table
         for(unsigned int i = 0; i < neigh.size(); i++) {
             boardStr = neigh[i]->boardToStr();
             // if the string representation of the board is not
@@ -79,16 +78,14 @@ void solve(unsigned int *b, unsigned int n, char type) {
             if (visited.find(boardStr) == visited.end()) {
                 boardQ.emplace(neigh[i]);
                 visited.insert(boardStr);
-            } else memCleanup.push_back(goalBoard);
+            } else delete neigh[i];
         }
+        delete goalBoard;
     }
     while(!boardQ.empty()) {
         goalBoard = boardQ.top();
         boardQ.pop();
-        memCleanup.push_back(goalBoard);
-    }
-    for(Board* d : memCleanup) {
-        delete d;
+        delete goalBoard;
     }
 }
 
