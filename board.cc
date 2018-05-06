@@ -159,7 +159,7 @@ unsigned int Board::manhattan() {
 	// each element's solved position (row, col) and its actual 
 	// position (row, col), ignoring the empty element
 	unsigned int man = 0;
-	int solIndex, solRow, solCol, actRow actCol;
+	int solIndex, solRow, solCol, actRow, actCol;
 	solIndex = solRow = solCol = actRow = actCol = 0;
 	// N casted as int to avoid unsigned int underflow
 	for(int i = 0; i < int(N); i++) {
