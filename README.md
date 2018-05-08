@@ -19,4 +19,15 @@ Using A* Search to Solve the N-Puzzle Problem
 - [x] Write board comparator class
 - [x] Use priority queue and unordered set (hash table)
 - [x] File IO
-- [ ] Comments and Optimizations
+- [x] Comments and Optimizations
+- [ ] Think of an algorithm that could prevent collisions: 
+
+For example 4 11 1 14
+            2 8 0 15
+            7 5 12 9
+            6 3 13 10 
+maps to the same string as 
+            4 1 11 14
+            2 8 0 15
+            7 5 12 9
+            6 3 13 10
