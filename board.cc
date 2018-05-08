@@ -222,6 +222,10 @@ std::string Board::boardToStr() {
 	std::string str = "";
 	for(unsigned int i = 0; i < N; i++) {
 		str += std::to_string(board[i]);
+		// some salt to the string that way a 
+		// board with sequence 11 1 and 1 11 
+		// won't produce the same string
+		str += "_"; 
 	}
 	return str;
 }
